@@ -1,0 +1,24 @@
+#!Main.AI script://
+#!presented by maybe studio
+#! AIC as AIcreateive files
+#! AIS as AIscript files
+##AIScript##
+
+Include Set [/] Main.ais
+Bring Set [/] Main.ais
+
+Set AyouType as NewType
+	Type.n_long as long
+	Type.n_int as integer
+	Type.n_str as string
+	Type.Ayou as string
+	Type.Mind as long
+	Type.Clear as Boolean [Y/N]
+	Type.haveCris as AyouType
+/Type
+
+StrNull=index
+IntNull=index
+
+Spring data to N_locate
+Send Message data to N_locate\data

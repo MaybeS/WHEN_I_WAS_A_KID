@@ -1,0 +1,51 @@
+Private Declare Function ClientToScreen& Lib "user32" (ByVal hwnd As Long, lpPoint As POINTAPI)
+Private Declare Function ClipCursor& Lib "user32" (lpRect As RECT)
+Private Declare Function ClipCursorBynum& Lib "user32" Alias "ClipCursor" (ByVal lpRect As Long)
+Private Declare Function SetCursorPos& Lib "user32" (ByVal x As Long, ByVal Y As Long)
+ 
+Private Type POINTAPI
+  x As Long
+  Y As Long
+End Type
+ 
+Private Type RECT
+  Left As Long
+  Top As Long
+  Right As Long
+  Bottom As Long
+End Type
+ 
+Private Sub Command1_Click()
+    Dim myRect  As RECT
+    Dim myPoint As POINTAPI
+    Dim ii      As Long
+ 
+    ' Form에서 (0,0)좌표가 Screen좌표로 어떤값을 갖는지 먼저 조사한다.
+    myPoint.x = 0
+    myPoint.Y = 0
+    ii = ClientToScreen&(Me.hwnd, myPoint)
+    ' 여기까지 myPoint.x와 myPoint.y에 Screen좌표값이 할당되었다.
+ 
+    ' 마우스의 운동범위를 결정하기 위해 사각형 영역을 설정하고
+    ' ClimpCursor()함수를 호출하면 마우스 범위가 정해진다.
+    myRect.Top = myPoint.Y
+    myRect.Left = myPoint.x
+    myRect.Right = myRect.Left + Me.ScaleWidth
+    myRect.Bottom = myRect.Top + Me.ScaleHeight
+    ii = ClipCursor&(myRect)
+End Sub
+ 
+Private Sub Command2_Click()
+    Dim ii    As Long
+    ' 파라메타로 0을 보내면 마우스 운동범위는 다시 원상복구된다.
+    ii = ClipCursorBynum&(0)
+End Sub
+ 
+Private Sub Form_Load()
+    'Pixel좌표계로 바꾼다.
+    '왜냐하면 ClientToScreen()함수와 ClipCursor()함수에서 사용되는
+    'RECT, POINTAPI 두개의 구조체는 Pixel좌표계를 기준으로 계산되기때문이다.
+    Me.ScaleMode = 3
+    Command1.Caption = "시작"
+    Command2.Caption = "원상태로"
+End Sub

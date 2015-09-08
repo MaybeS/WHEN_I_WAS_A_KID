@@ -1,0 +1,8 @@
+83 행: List1 컨트롤의 ComctlLib.ImageList 클래스는 로드한 컨트롤 클래스가 아닙니다.
+86 행: List1의 _ExtentX 속성 이름이 잘못되었습니다. 
+87 행: List1의 _ExtentY 속성 이름이 잘못되었습니다. 
+89 행: List1의 ImageWidth 속성 이름이 잘못되었습니다. 
+90 행: List1의 ImageHeight 속성 이름이 잘못되었습니다. 
+91 행: List1의 MaskColor 속성 이름이 잘못되었습니다. 
+92 행: List1의 _Version 속성 이름이 잘못되었습니다. 
+111 행: List1의 Images 속성 이름이 잘못되었습니다. 

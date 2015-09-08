@@ -1,0 +1,26 @@
+Public Sub Clear(FormName As Form)
+
+Dim txt As Control
+
+'clear the text boxes
+For Each txt In frmClearMe
+
+'check all the items on the specified fo ' rm. if text boxes are found, then clear ' all the text boxes
+If TypeOf txt Is TextBox Then txt.Text = ""
+
+'loop
+Next
+
+
+End Sub
+
+
+To call this sub, enter the following code:
+Clear(FormName)
+ 
+
+e.g.
+
+If you have many text boxes on a form called Form1 and you want to clear them on a single click use the following code :
+
+Clear(Form1)

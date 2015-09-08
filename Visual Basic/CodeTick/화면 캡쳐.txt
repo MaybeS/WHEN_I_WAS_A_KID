@@ -1,0 +1,270 @@
+Option Explicit
+
+Private Type ICONINFO
+        fIcon As Long
+        xHotspot As Long
+        yHotspot As Long
+        hbmMask As Long
+        hbmColor As Long
+End Type
+Private Type POINTAPI
+        x As Long
+        y As Long
+End Type
+Private Type GUID
+    Data1    As Long
+    Data2    As Integer
+    Data3    As Integer
+    Data4(7) As Byte
+End Type
+Private Type RECT
+    Left   As Long
+    Top    As Long
+    Right  As Long
+    Bottom As Long
+End Type
+Private Type PicBmp
+    Size As Long
+    Type As Long
+    hBmp As Long
+    hPal As Long
+    Reserved As Long
+End Type
+Private Type PALETTEENTRY
+    peRed   As Byte
+    peGreen As Byte
+    peBlue  As Byte
+    peFlags As Byte
+End Type
+Private Type LOGPALETTE
+    palVersion       As Integer
+    palNumEntries    As Integer
+    palPalEntry(255) As PALETTEENTRY
+End Type
+
+Private Type GdiplusStartupInput
+   GdiplusVersion As Long
+   DebugEventCallback As Long
+   SuppressBackgroundThread As Long
+   SuppressExternalCodecs As Long
+End Type
+Private Type EncoderParameter
+   GUID As GUID
+   NumberOfValues As Long
+   Type As Long
+   Value As Long
+End Type
+Private Type EncoderParameters
+   Count As Long
+   Parameter As EncoderParameter
+End Type
+Private Declare Function CreateCompatibleBitmap Lib "GDI32" ( _
+    ByVal hdc As Long, ByVal nWidth As Long, _
+    ByVal nHeight As Long) As Long
+Private Declare Function GetDeviceCaps Lib "GDI32" ( _
+    ByVal hdc As Long, ByVal iCapabilitiy As Long) As Long
+Private Declare Function GetSystemPaletteEntries Lib "GDI32" ( _
+    ByVal hdc As Long, ByVal wStartIndex As Long, _
+    ByVal wNumEntries As Long, lpPaletteEntries As PALETTEENTRY) _
+    As Long
+Private Declare Function CreateCompatibleDC Lib "GDI32" ( _
+    ByVal hdc As Long) As Long
+
+Private Declare Function CreatePalette Lib "GDI32" ( _
+    lpLogPalette As LOGPALETTE) As Long
+
+Private Declare Function SelectPalette Lib "GDI32" ( _
+    ByVal hdc As Long, ByVal hPalette As Long, _
+    ByVal bForceBackground As Long) As Long
+Private Declare Function RealizePalette Lib "GDI32" ( _
+    ByVal hdc As Long) As Long
+Private Declare Function SelectObject Lib "GDI32" ( _
+    ByVal hdc As Long, ByVal hObject As Long) As Long
+Private Declare Function BitBlt Lib "GDI32" ( _
+    ByVal hDCDest As Long, ByVal XDest As Long, _
+    ByVal YDest As Long, ByVal nWidth As Long, _
+    ByVal nHeight As Long, ByVal hDCSrc As Long, _
+    ByVal XSrc As Long, ByVal YSrc As Long, ByVal dwRop As Long) _
+    As Long
+Private Declare Function GetWindowDC Lib "user32" ( _
+    ByVal hWnd As Long) As Long
+Private Declare Function GetDC Lib "user32" ( _
+    ByVal hWnd As Long) As Long
+Private Declare Function ReleaseDC Lib "user32" ( _
+    ByVal hWnd As Long, ByVal hdc As Long) As Long
+Private Declare Function DeleteDC Lib "GDI32" ( _
+    ByVal hdc As Long) As Long
+Private Declare Function GetWindowRect Lib "user32" ( _
+    ByVal hWnd As Long, lpRect As RECT) As Long
+Private Declare Function GetDesktopWindow Lib "user32" () As Long
+Private Declare Function GetForegroundWindow Lib "user32" () As Long
+Private Declare Function OleCreatePictureIndirect _
+    Lib "olepro32.dll" (PicDesc As PicBmp, RefIID As GUID, _
+    ByVal fPictureOwnsHandle As Long, IPic As IPicture) As Long
+Private Declare Function GetIconInfo Lib "user32" (ByVal hIcon As Long, piconinfo As ICONINFO) As Long
+Private Declare Function GetCursorPos Lib "user32" (lpPoint As POINTAPI) As Long
+Private Declare Function GetCursor Lib "user32" () As Long
+Private Declare Function DrawIcon Lib "user32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal hIcon As Long) As Long
+Private Declare Function GdiplusStartup Lib "gdiplus" ( _
+   Token As Long, _
+   inputbuf As GdiplusStartupInput, _
+   Optional ByVal outputbuf As Long = 0) As Long
+Private Declare Function GdiplusShutdown Lib "gdiplus" ( _
+   ByVal Token As Long) As Long
+Private Declare Function GdipCreateBitmapFromHBITMAP Lib "gdiplus" ( _
+   ByVal hbm As Long, _
+   ByVal hPal As Long, _
+   BITMAP As Long) As Long
+Private Declare Function GdipDisposeImage Lib "gdiplus" ( _
+   ByVal Image As Long) As Long
+Private Declare Function GdipSaveImageToFile Lib "gdiplus" ( _
+   ByVal Image As Long, _
+   ByVal FileName As Long, _
+   clsidEncoder As GUID, _
+   encoderParams As Any) As Long
+Private Declare Function CLSIDFromString Lib "ole32" ( _
+   ByVal Str As Long, _
+   ID As GUID) As Long
+   
+Private Const RASTERCAPS As Long = 38
+Private Const RC_PALETTE As Long = &H100
+Private Const SIZEPALETTE As Long = 104
+Public Function CaptureWindow(ByVal Path As String, Optional MouseShow As Boolean) As String
+    Dim NowDate As String
+    
+    NowDate = Format(Date, "YYYYMMDD") & Format(Time, "HHMMSS")
+    SaveJPG CaptureScreen(MouseShow), App.Path & Path & NowDate & ".png", 100
+    'SaveJPG CaptureScreen, App.Path & "\Data\Image\" & NowDate & ".png", 100
+    
+    CaptureWindow = NowDate
+End Function
+Private Sub SaveJPG( _
+   ByVal pict As StdPicture, _
+   ByVal FileName As String, _
+   Optional ByVal quality As Byte = 100)
+Dim tSI As GdiplusStartupInput
+Dim lRes As Long
+Dim lGDIP As Long
+Dim lBitmap As Long
+
+   tSI.GdiplusVersion = 1
+   lRes = GdiplusStartup(lGDIP, tSI)
+   If lRes = 0 Then
+      lRes = GdipCreateBitmapFromHBITMAP(pict.Handle, 0, lBitmap)
+   
+      If lRes = 0 Then
+         Dim tJpgEncoder As GUID
+         Dim tParams As EncoderParameters
+         CLSIDFromString StrPtr("{557cf406-1a04-11d3-9a73-0000f81ef32e}"), _
+                         tJpgEncoder
+         tParams.Count = 1
+         With tParams.Parameter
+            CLSIDFromString StrPtr("{1D5BE4B5-FA4A-452D-9CDD-5DB35105E7EB}"), .GUID
+            .NumberOfValues = 1
+            .Type = 4
+            .Value = VarPtr(quality)
+         End With
+         lRes = GdipSaveImageToFile( _
+                  lBitmap, _
+                  StrPtr(FileName), _
+                  tJpgEncoder, _
+                  tParams)
+         GdipDisposeImage lBitmap
+      End If
+      GdiplusShutdown lGDIP
+   End If
+   If lRes Then Err.Raise 5, , "Cannot save the image. GDI+ Error:" & lRes
+End Sub
+
+Public Function CaptureScreen(Optional MouseShow As Boolean) As Picture
+    Dim hWndScreen As Long
+    hWndScreen = GetDesktopWindow()
+    With Screen
+        Set CaptureScreen = aCaptureWindow(hWndScreen, MouseShow, 0, 0, _
+                .Width \ .TwipsPerPixelX, .Height \ .TwipsPerPixelY)
+    End With
+End Function
+Private Function aCaptureWindow(ByVal hWndSrc As Long, _
+    ByVal MouseOption As Boolean, _
+    ByVal LeftSrc As Long, _
+    ByVal TopSrc As Long, ByVal WidthSrc As Long, _
+    ByVal HeightSrc As Long) As Picture
+
+    Dim hDCMemory       As Long
+    Dim hBmp            As Long
+    Dim hBmpPrev        As Long
+    Dim r               As Long
+    Dim hDCSrc          As Long
+    Dim hPal            As Long
+    Dim hPalPrev        As Long
+    Dim RasterCapsScrn  As Long
+    Dim HasPaletteScrn  As Long
+    Dim PaletteSizeScrn As Long
+    Dim LogPal          As LOGPALETTE
+    
+    Dim MPos As POINTAPI
+    Dim SysCur As Long
+    Dim SysIcon As ICONINFO
+    
+    hDCSrc = GetDC(hWndSrc)
+    hDCMemory = CreateCompatibleDC(hDCSrc)
+    hBmp = CreateCompatibleBitmap(hDCSrc, WidthSrc, HeightSrc)
+    hBmpPrev = SelectObject(hDCMemory, hBmp)
+    
+    RasterCapsScrn = GetDeviceCaps(hDCSrc, RASTERCAPS)   'Raster capabilities
+    HasPaletteScrn = RasterCapsScrn And RC_PALETTE       'Palette support
+    PaletteSizeScrn = GetDeviceCaps(hDCSrc, SIZEPALETTE) 'Palette size
+    
+    If HasPaletteScrn And (PaletteSizeScrn = 256) Then
+        LogPal.palVersion = &H300
+        LogPal.palNumEntries = 256
+        r = GetSystemPaletteEntries(hDCSrc, 0, 256, LogPal.palPalEntry(0))
+        hPal = CreatePalette(LogPal)
+        hPalPrev = SelectPalette(hDCMemory, hPal, 0)
+        r = RealizePalette(hDCMemory)
+    End If
+    r = BitBlt(hDCMemory, 0, 0, WidthSrc, HeightSrc, hDCSrc, _
+        LeftSrc, TopSrc, vbSrcCopy)
+        
+    If MouseOption Then
+        GetCursorPos MPos
+        SysCur = GetCursor
+        GetIconInfo SysCur, SysIcon
+        DrawIcon hDCMemory, MPos.x - SysIcon.xHotspot, MPos.y - SysIcon.yHotspot, SysCur
+    End If
+    hBmp = SelectObject(hDCMemory, hBmpPrev)
+    
+    If HasPaletteScrn And (PaletteSizeScrn = 256) Then
+        hPal = SelectPalette(hDCMemory, hPalPrev, 0)
+    End If
+
+    r = DeleteDC(hDCMemory)
+    r = ReleaseDC(hWndSrc, hDCSrc)
+    
+    Set aCaptureWindow = CreateBitmapPicture(hBmp, hPal)
+End Function
+Private Function CreateBitmapPicture(ByVal hBmp As Long, _
+        ByVal hPal As Long) As Picture
+    Dim r   As Long
+    Dim Pic As PicBmp
+    
+    Dim IPic          As IPicture
+    Dim IID_IDispatch As GUID
+
+    With IID_IDispatch
+        .Data1 = &H20400
+        .Data4(0) = &HC0
+        .Data4(7) = &H46
+    End With
+
+    With Pic
+        .Size = Len(Pic)
+        .Type = vbPicTypeBitmap
+        .hBmp = hBmp
+        .hPal = hPal
+    End With
+
+    r = OleCreatePictureIndirect(Pic, IID_IDispatch, 1, IPic)
+
+    Set CreateBitmapPicture = IPic
+End Function

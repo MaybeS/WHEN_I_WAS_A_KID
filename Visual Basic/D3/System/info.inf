@@ -1,0 +1,10 @@
+;Maybe Studio Present
+;D3 Editor _ SE
+;file for information about 3Di and 3Dini
+;there are XDi and XDini file
+;for example 2Di and 2Dini file are used in this program
+;the different thing about 2Di and 2Dini is
+;wethere it include imagedata.
+;2Di file include imagedata as jpg , bmp or gif
+;but 2Dini file is not include those thing, however it include
+;same file name dir

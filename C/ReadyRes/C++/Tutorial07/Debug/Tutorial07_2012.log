@@ -1,0 +1,25 @@
+﻿빌드 시작: 10월 30일 목요일 오후 7:09:23
+     1>2 노드의 "D:\Develope\Visual Studio C++\ReadyRes\C++\Tutorial07\Tutorial07_2012.vcxproj" 프로젝트(Build 대상)입니다.
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"PS" /T ps_4_0 /Fo "D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07_PS.cso" Tutorial07_PS.hlsl 
+         compilation object save succeeded; see D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07_PS.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"VS" /T vs_4_0 /Fo "D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07_VS.cso" Tutorial07_VS.hlsl 
+         compilation object save succeeded; see D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07_VS.cso
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt  DDSTextureLoader.cpp Tutorial07.cpp
+         DDSTextureLoader.cpp
+         Tutorial07.cpp
+         코드를 생성하고 있습니다...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\Tutorial07.res" Tutorial07.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07.exe" /INCREMENTAL /NOLOGO d3d11.lib d3dcompiler.lib dxguid.lib winmm.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07.lib" /MACHINE:X86 /SAFESEH  Debug\Tutorial07.res
+         Debug\DDSTextureLoader.obj
+         Debug\Tutorial07.obj
+     1>DDSTextureLoader.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
+         Tutorial07_2012.vcxproj -> D:\Develope\Visual Studio C++\ReadyRes\C++\Debug\Tutorial07.exe
+     1>"D:\Develope\Visual Studio C++\ReadyRes\C++\Tutorial07\Tutorial07_2012.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:02.87

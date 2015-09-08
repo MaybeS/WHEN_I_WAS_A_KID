@@ -1,0 +1,25 @@
+' 선언
+Private Declare Function ShowCursor Lib "user32" _
+                    (ByVal bShow As Long) As Long
+ 
+' 마우스 커서 감추기
+Public Sub Mouse_Hide()
+    Dim ret As Long
+    Do
+        ret = ShowCursor(False)
+    Loop Until ret <= -1
+End Sub
+ 
+' 마우스 커서 보이도록
+Public Sub Mouse_Show()
+    Dim ret As Long
+    Do
+        ret = ShowCursor(True)
+    Loop Until ret >= 0
+End Sub
+ 
+사용법
+Mouse_Hide
+Mouse_Show
+ 
+간단 Tip 이였습니다.

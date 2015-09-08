@@ -1,0 +1,111 @@
+Text1 - Ã¤ÆÃ ³»¿ë (¼Ó¼º¿¡ MultiLine À» True·Î ÇØÁÝ´Ï´Ù.)
+Text2 - ´Ð³×ÀÓ
+Text3 - º¸³¾ ³»¿ë
+Command1 - Àü¼Û ¹öÆ°
+Winsock1 - ¼­·Î ÁÖ°í ¹Þ´Â ¸Å°³Ã¼
+À» ³Ö¾î ÁÖ¼¼¿ä.
+
+
+¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¼Ò½º¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+ÃÊ·Ï»ö ±ÛÀÚ¸¦ ÀÐ¾îÁÖ¼¼¿ä!!
+Dim ³»¿ë As String          '³»¿ëÀ» ´ãÀ» ¹®ÀÚ ¼±¾ð
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Form_Load()    'ÆûÀÌ ¿­¸®¸é(¼­¹ö ¿­±â)
+Winsock1.Close             'ÃÊ±âÈ­(¾ÈÇØµµµÊ)
+Winsock1.LocalPort = 1234  'Æ÷Æ® ¼³Á¤(¼ýÀÚ·Î ¾Æ¹«°Å³ª , 80 »©°í...)
+Winsock1.Listen            '´ë±âÇÕ´Ï´Ù.
+MsgBox "¼­¹ö¿­¸²"           '¸Þ¼¼Áö ¶Ù¿ì±â
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_ConnectionRequest(ByVal requestID As Long)   '´©°¡ Á¢¼ÓÀ» ¿ä±¸ÇÕ´Ï´Ù.
+Winsock1.Close                       'ÃÊ±âÈ­ ÇØÁÝ´Ï´Ù.
+Winsock1.Accept requestID            '¹Þ¾ÆÁÝ´Ï´Ù.
+MsgBox "¾î¶²»ç¶÷ÀÌ Á¢¼Ó ÇÏ¿´½À´Ï´Ù."   '¸Þ¼¼Áö ¶Ù¿öÁÝ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_DataArrival(ByVal bytesTotal As Long)'µ¥ÀÌÅÍ°¡ µé¾î¿À¸é....
+Winsock1.GetData ³»¿ë          '±× µ¥ÀÌÅÍ¸¦ ¾Æ±î ¸ÇÀ§¿¡ ¼±¾ðÇß´ø "³»¿ë"¿¡ ´ã½À´Ï´Ù.
+Text1 = ³»¿ë                   '¹æ±Ý ´ãÀº "³»¿ë"À» Text1¿¡ ³Ö¾î ÁÝ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Command1_Click() '¹öÆ° Å¬¸¯ÇÏ¸é...
+On Error Resume Next            '¿¡·¯³ª¸é ¹«½Ã
+Text1 = Text1 & Text2 & ">" & Text3 & vbNewLine 'Text1ÀÇ ³»¿ë°ú Text2(´Ð³×ÀÓ)+Text3(º¸³¾ ³»¿ë)+vbNewLine(ÁÙ¹Ù²Ù±â)·Î Text1¿¡ Àû¿ë½ÃÄÑ ÁÝ´Ï´Ù.
+Winsock1.SendData Text1                                   '¹æ±Ý Àû¿ë½ÃÅ² ³»¿ëÀ» Å¬¶óÀÌ¾ðÆ®¿¡ º¸³»ÁÝ´Ï´Ù.
+Text3 = ""   'Text3(º¸³¾³»¿ë)À» ÃÊ±âÈ­ ½ÃÄÑÁÝ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+ÀÌ°Í¸¸ ÀÖ¾îµµ Ã¤ÆÃÀº µË´Ï´Ù.
+ÇÏÁö¸¸ ´õ ¿Ïº®ÇÏ±æ ¹Ù¶õ´Ù¸é ¾Æ·¹ ¼Ò½º¸¦ ºÁÁÖ¼¼¿ä.
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_Error(ByVal Number As Integer, Description As String, ByVal Scode As Long, ByVal Source As String, ByVal HelpFile As String, ByVal HelpContext As Long, CancelDisplay As Boolean)
+'¿¡·¯°¡ ³­´Ù¸é.....
+MsgBox "¾Ë¼ö¾ø´Â¿À·ù"   '¸Þ¼¼Áö¸¦ ¶Ù¿öÁÝ´Ï´Ù.
+End       'Á¾·áÇÕ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_Close()   '´ÝÀ¸·Á°í ÇÑ´Ù¸é.....
+MsgBox "¼­¹ö¸¦ ´Ý½À´Ï´Ù."   '¸Þ¼¼Áö¸¦ ¶Ù¿öÁÝ´Ï´Ù.
+End       'Á¾·áÇÕ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+
+
+
+
+
+
+
+
+
+
+Text1 - Ã¤ÆÃ ³»¿ë (¼Ó¼º¿¡ MultiLine À» True·Î ÇØÁÝ´Ï´Ù.)
+Text2 - ´Ð³×ÀÓ
+Text3 - º¸³¾ ³»¿ë
+Text4 - ¾ÆÀÌÇÇ
+Text5 - Æ÷Æ® 
+Command1 - Àü¼Û ¹öÆ°
+Command2 - ¿¬°á ¹öÆ° 
+Winsock1 - ¼­·Î ÁÖ°í ¹Þ´Â ¸Å°³Ã¼
+À» ³Ö¾î ÁÖ¼¼¿ä.
+
+
+¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¼Ò½º¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+ÃÊ·Ï»ö ±ÛÀÚ¸¦ ÀÐ¾îÁÖ¼¼¿ä!!
+Dim ³»¿ë As String
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Command2_Click()    '¿¬°á ¹öÆ° Å¬¸¯ÇÏ¸é...
+Winsock1.Connect Text4, Text5   ' "¾ÆÀÌÇÇ, Æ÷Æ®" ·Î ¿¬°áÇÕ´Ï´Ù.
+
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_Connect()   'Á¢¼ÓÀÌ µÇ¸é....
+MsgBox "Á¢¼Ó ¿Ï·á"                '¸Þ¼¼Áö¸¦ ¶ç¿ó´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_DataArrival(ByVal bytesTotal As Long)   'µ¥ÀÌÅÍ°¡ µé¾î¿À¸é....
+Winsock1.GetData ³»¿ë   '±× µ¥ÀÌÅÍ¸¦ ¾Æ±î ¸ÇÀ§¿¡ ¼±¾ðÇß´ø "³»¿ë"¿¡ ´ã½À´Ï´Ù.
+Text1 = ³»¿ë            '¹æ±Ý ´ãÀº "³»¿ë"À» Text1¿¡ ³Ö¾î ÁÝ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Command1_Click() '¹öÆ° Å¬¸¯ÇÏ¸é...
+On Error Resume Next            '¿¡·¯³ª¸é ¹«½Ã
+Text1 = Text1 & Text2 & ">" & Text3 & vbNewLine 'Text1ÀÇ ³»¿ë°ú Text2(´Ð³×ÀÓ)+Text3(º¸³¾ ³»¿ë)+vbNewLine(ÁÙ¹Ù²Ù±â)·Î Text1¿¡ Àû¿ë½ÃÄÑ ÁÝ´Ï´Ù.
+Winsock1.SendData Text1                                   '¹æ±Ý Àû¿ë½ÃÅ² ³»¿ëÀ» ¼­¹ö¿¡ º¸³»ÁÝ´Ï´Ù.
+Text3 = ""   'Text3(º¸³¾³»¿ë)À» ÃÊ±âÈ­ ½ÃÄÑÁÝ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+ÀÌ°Í¸¸ ÀÖ¾îµµ Ã¤ÆÃÀº µË´Ï´Ù.
+ÇÏÁö¸¸ ´õ ¿Ïº®ÇÏ±æ ¹Ù¶õ´Ù¸é ¾Æ·¹ ¼Ò½º¸¦ ºÁÁÖ¼¼¿ä.
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_Error(ByVal Number As Integer, Description As String, ByVal Scode As Long, ByVal Source As String, ByVal HelpFile As String, ByVal HelpContext As Long, CancelDisplay As Boolean)
+'¿¡·¯°¡ ³­´Ù¸é.....
+MsgBox "¾Ë¼ö¾ø´Â¿À·ù"   '¸Þ¼¼Áö¸¦ ¶Ù¿öÁÝ´Ï´Ù.
+End       'Á¾·áÇÕ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ
+Private Sub Winsock1_Close()   '´ÝÀ¸·Á°í ÇÑ´Ù¸é.....
+MsgBox "¿¬°áÀ» ²÷½À´Ï´Ù."   '¸Þ¼¼Áö¸¦ ¶Ù¿öÁÝ´Ï´Ù.
+End       'Á¾·áÇÕ´Ï´Ù.
+End Sub
+'¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ¤Ñ

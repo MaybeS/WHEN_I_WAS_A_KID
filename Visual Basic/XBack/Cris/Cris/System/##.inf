@@ -1,0 +1,18 @@
+//#List
+//#(명령어 치환문자)#
+//#name# = name (이름이 name 라면)
+#name# as .Name
+#time# as Format(Now,"HH시 MM분 SS초")
+#time.h# as if option then Format(Now,"HH시") else Format(Now,"HH")
+#time.m# as if option then Format(Now,"MM분") else Format(Now,"MM")
+#time.s# as if option then Format(Now,"SS초") else Format(Now,"SS")
+#clear# as clear .me.cls
+#RemindCnt# as .RemindCounter
+#RemindString# as .RemindString()  '~1000'
+#RemindNow# as .RemindNow()     '~100'
+#RemindAlram# as .RemindAlram()  '~5'
+#ProductName# as .Product.Name as string
+#SearchRemindString# as String blt search
+#Domain# as .domain as string
+
+

@@ -1,0 +1,93 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: NTGraph - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP56E.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Release/" /Fp"Release/NTGraph.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\诀公\program\NTGraph_src\AnnoPpg.cpp"
+"E:\诀公\program\NTGraph_src\ColourPicker.cpp"
+"E:\诀公\program\NTGraph_src\ColourPopup.cpp"
+"E:\诀公\program\NTGraph_src\CursorPpg.cpp"
+"E:\诀公\program\NTGraph_src\ElementPpg.cpp"
+"E:\诀公\program\NTGraph_src\FormatPpg.cpp"
+"E:\诀公\program\NTGraph_src\NTGraph.cpp"
+"E:\诀公\program\NTGraph_src\NTGraphCtl.cpp"
+"E:\诀公\program\NTGraph_src\NTGraphPpg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP56E.tmp" 
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP56F.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Release/" /Fp"Release/NTGraph.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\诀公\program\NTGraph_src\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP56F.tmp" 
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+AnnoPpg.cpp
+ColourPicker.cpp
+ColourPopup.cpp
+CursorPpg.cpp
+ElementPpg.cpp
+FormatPpg.cpp
+NTGraph.cpp
+NTGraphCtl.cpp
+NTGraphPpg.cpp
+Generating Code...
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP570.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"Release/NTGraph.pdb" /machine:I386 /def:".\NTGraph.def" /out:"Release/NTGraph.ocx" /implib:"Release/NTGraph.lib" 
+".\Release\AnnoPpg.obj"
+".\Release\ColourPicker.obj"
+".\Release\ColourPopup.obj"
+".\Release\CursorPpg.obj"
+".\Release\ElementPpg.obj"
+".\Release\FormatPpg.obj"
+".\Release\NTGraph.obj"
+".\Release\NTGraphCtl.obj"
+".\Release\NTGraphPpg.obj"
+".\Release\StdAfx.obj"
+".\Release\NTGraph.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP570.tmp"
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP571.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Release\NTGraph.ocx"
+echo regsvr32 exec. time > ".\Release\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP571.bat"
+Linking...
+   Creating library Release/NTGraph.lib and object Release/NTGraph.exp
+<h3>Output Window</h3>
+Registering ActiveX Control...
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP575.tmp" with contents
+[
+/nologo /o"Release/NTGraph.bsc" 
+".\Release\StdAfx.sbr"
+".\Release\AnnoPpg.sbr"
+".\Release\ColourPicker.sbr"
+".\Release\ColourPopup.sbr"
+".\Release\CursorPpg.sbr"
+".\Release\ElementPpg.sbr"
+".\Release\FormatPpg.sbr"
+".\Release\NTGraph.sbr"
+".\Release\NTGraphCtl.sbr"
+".\Release\NTGraphPpg.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP575.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+NTGraph.ocx - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

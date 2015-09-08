@@ -1,0 +1,224 @@
+
+확인, 확인-취소, 예-아니오, 예-아니오-취소의 4가지 유형을 제공하며
+각각 Message, Confirm, Agree, Choose 함수를 쓸 수 있다.
+ 
+Private Form As Form
+Private RTB As RichTextBox
+Private CM As New ContextMenu
+Private BtnOK, BtnLeft, BtnMiddle As Button
+ 
+Public Sub New()
+    Form = New Form
+    With Form
+        .FormBorderStyle = FormBorderStyle.FixedSingle
+        .MinimizeBox = False : .MaximizeBox = False
+        .ShowInTaskbar = False : .Icon = ProgramIcon
+    End With
+End Sub
+ 
+Public Function Message(ByVal msg As String, _
+Optional ByVal Caption As String = "참고하세요", _
+Optional ByVal CenterScreen As Boolean = False) As DialogResult
+    Form.Controls.Clear()
+ 
+    Dim xo, xe, ye, W, H As Integer
+    AddRTB(msg) : W = RTB.Width
+    xo = RTB.Left : xe = xo + W : ye = RTB.Top + RTB.Height + 8
+ 
+    AddBtnOK("확인", xe, ye, DialogResult.OK)
+    ye = ye + BtnOK.Height : W = xe + 22 : H = ye + 32
+ 
+    SetStartPosition(CenterScreen)
+    Form.Size = New Size(W, H) : Form.Text = Caption
+    BtnOK.Select()
+    Return Form.ShowDialog
+End Function
+ 
+Public Function Confirm(ByVal msg As String, _
+Optional ByVal Caption As String = "확인하세요", _
+Optional ByVal CenterScreen As Boolean = False) As DialogResult
+    Form.Controls.Clear()
+ 
+    Dim xo, xe, ye, W, H As Integer
+    AddRTB(msg) : W = RTB.Width
+    xo = RTB.Left : xe = xo + W : ye = RTB.Top + RTB.Height + 8
+ 
+    AddBtnOK("확인", xe, ye, DialogResult.OK)
+    AddBtnLeft("취소", xo, ye, DialogResult.Cancel)
+    ye = ye + BtnOK.Height : W = xe + 22 : H = ye + 32
+ 
+    SetStartPosition(CenterScreen)
+    Form.Size = New Size(W, H) : Form.Text = Caption
+    BtnOK.Select()
+    Return Form.ShowDialog
+End Function
+ 
+Public Function Agree(ByVal msg As String, _
+Optional ByVal Caption As String = "결정하세요", _
+Optional ByVal CenterScreen As Boolean = False) As DialogResult
+    Form.Controls.Clear()
+    Dim xo, xe, ye, W, H As Integer
+    AddRTB(msg) : W = RTB.Width
+    xo = RTB.Left : xe = xo + W : ye = RTB.Top + RTB.Height + 8
+ 
+    AddBtnOK("예", xe, ye, DialogResult.Yes)
+    AddBtnLeft("아니오", xo, ye, DialogResult.No)
+    ye = ye + BtnOK.Height : W = xe + 22 : H = ye + 32
+ 
+    SetStartPosition(CenterScreen)
+    Form.Size = New Size(W, H) : Form.Text = Caption
+    BtnOK.Select()
+    Return Form.ShowDialog
+End Function
+ 
+Public Function Choose(ByVal msg As String, _
+Optional ByVal Caption As String = "결정하세요", _
+Optional ByVal CenterScreen As Boolean = False) As DialogResult
+    Form.Controls.Clear()
+    SetStartPosition(CenterScreen)
+    Dim xo, xm, xe, ye, W, H As Integer
+    AddRTB(msg) : W = RTB.Width
+    xo = RTB.Left : xm = xo + W / 2 : xe = xo + W
+    ye = RTB.Top + RTB.Height + 8
+ 
+    AddBtnOK("예", xe, ye, DialogResult.Yes)
+    AddBtnMiddle("아니오", xm, ye, DialogResult.No)
+    AddBtnLeft("취소", xo, ye, DialogResult.Cancel)
+    ye = ye + BtnOK.Height : W = xe + 22 : H = ye + 32
+ 
+    SetStartPosition(CenterScreen)
+    Form.Size = New Size(W, H) : Form.Text = Caption
+    BtnOK.Select()
+    Return Form.ShowDialog
+End Function
+ 
+Private Sub SetStartPosition(ByVal CenterScreen As Boolean)
+    If CenterScreen Then
+        Form.StartPosition = FormStartPosition.CenterScreen
+    Else
+        Form.StartPosition = FormStartPosition.CenterParent
+    End If
+End Sub
+ 
+Private Sub AddRTB(ByVal msg As String)
+    RTB = New RichTextBox
+    msg = msg.Replace("|", vbLf)
+    Dim mFont As Font = RTB.Font
+    Dim G As Graphics = RTB.CreateGraphics
+    Dim W, H, n As Integer
+ 
+    '먼저 RTB의 폭을 설정한 다음
+    Dim SF As SizeF = G.MeasureString(msg, mFont)
+    W = Math.Ceiling(SF.Width)
+    If W < 280 Then W = 280 Else If W > 420 Then W = 420
+ 
+    '대략 소요보다 길게 높이를 정해놓고
+    SF = G.MeasureString(msg, mFont, W)
+    H = SF.Height * 1.5
+    RTB.Size = New Size(W, H)
+ 
+    '텍스트를 적어넣고 마지막 글자의 위치에서 필요한 높이를 얻는다.
+    RTB.Text = msg
+    n = RTB.Text.Length - 1
+    H = RTB.GetPositionFromCharIndex(n).Y + 30
+    RTB.Location = New Point(16, 16) : RTB.Size = New Size(W, H)
+    RTB.BorderStyle = BorderStyle.None
+    RTB.ReadOnly = True
+    RTB.BackColor = SystemColors.Control
+ 
+    '[ ]내의 문자는 []포함 파란색, { }내의 문자는 {} 제거 파란색, 
+    '< >내의 문자는 <>제거 빨간색으로 한다.
+    Me.ChangeColor("[]", Color.Blue)
+    Me.ChangeColor("{}", Color.Blue, True)
+    Me.ChangeColor("<>", Color.Red, True)
+ 
+    Form.Controls.Add(RTB)
+    AddContextMenu()
+End Sub
+ 
+Private Sub ChangeColor(ByVal Order As String, ByVal xColor As Color, _
+Optional ByVal RemoveOrder As Boolean = False)
+    Dim chOpen, chClose As String
+    Dim ns, ne As Integer
+    Dim Tx As String
+    chOpen = Order.Chars(0) : chClose = Order.Chars(1)
+    Do
+        ns = RTB.Text.IndexOf(chOpen, ns) : If ns < 0 Then Exit Do
+        ne = RTB.Text.IndexOf(chClose, ns) : If ne < 0 Then Exit Do
+        RTB.Select(ns, ne - ns + 1) : Tx = RTB.SelectedText
+        If Tx.IndexOf(vbLf) < 0 And Tx.Length > 2 Then
+            RTB.SelectionColor = xColor
+            If RemoveOrder Then
+                RTB.SelectedText = Tx.Substring(1, Tx.Length - 2)
+                ns = ne - 1
+            Else
+                ns = ne
+            End If
+        Else
+            ns = ne
+        End If
+        If ns >= RTB.TextLength Then Exit Do
+    Loop
+End Sub
+ 
+Private Sub AddBtnOK(ByVal Tx As String, _
+ByVal xe As Integer, ByVal ye As Integer, ByVal DResult As DialogResult)
+    BtnOK = New Button
+    With BtnOK
+        .Text = Tx
+        .Size = New Size(75, 24)
+        .Location = New Point(xe - 75, ye)
+        .DialogResult = DResult
+    End With
+    Form.Controls.Add(BtnOK)
+    Form.AcceptButton = BtnOK
+End Sub
+ 
+Private Sub AddBtnLeft(ByVal Tx As String, _
+ByVal xo As Integer, ByVal ye As Integer, ByVal DResult As DialogResult)
+    BtnLeft = New Button
+    With BtnLeft
+        .Text = Tx
+        .Size = New Size(75, 24)
+        .Location = New Point(xo, ye)
+    End With
+ 
+    Form.Controls.Add(BtnLeft)
+    If DResult = DialogResult.Cancel Then
+        Form.CancelButton = BtnLeft
+    Else
+        BtnLeft.DialogResult = DResult
+    End If
+End Sub
+ 
+Private Sub AddBtnMiddle(ByVal Tx As String, _
+ByVal xm As Integer, ByVal ye As Integer, ByVal DResult As DialogResult)
+    BtnMiddle = New Button
+    With BtnMiddle
+        .Text = Tx
+        .Size = New Size(75, 24)
+        .Location = New Point(xm - 37, ye)
+    End With
+    Form.Controls.Add(BtnMiddle)
+    If DResult = DialogResult.Cancel Then
+        Form.CancelButton = BtnMiddle
+    Else
+        BtnMiddle.DialogResult = DResult
+    End If
+End Sub
+ 
+Private Sub AddContextMenu()
+    CM = New ContextMenu
+    AddHandler CM.Popup, AddressOf cxRTB_Popup
+    CM.MenuItems.Add("복사", AddressOf cxCopy_Click)
+    RTB.ContextMenu = CM
+End Sub
+ 
+Private Sub cxRTB_Popup(ByVal sender As Object, ByVal e As EventArgs)
+    CM.MenuItems(0).Enabled = IIf(RTB.SelectionLength > 0, True, False)
+End Sub
+ 
+Private Sub cxCopy_Click(ByVal sender As Object, ByVal e As EventArgs)
+    RTB.Copy()
+End Sub
+[출처] 리치텍스트박스를 사용한 메시지박스|작성자 우헌

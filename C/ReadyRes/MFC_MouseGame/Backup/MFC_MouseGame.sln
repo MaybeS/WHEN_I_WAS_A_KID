@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC_MouseGame", "MFC_MouseGame\MFC_MouseGame.vcproj", "{921522A6-91DF-4749-B8A1-138EABABFFD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{921522A6-91DF-4749-B8A1-138EABABFFD7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{921522A6-91DF-4749-B8A1-138EABABFFD7}.Debug|Win32.Build.0 = Debug|Win32
+		{921522A6-91DF-4749-B8A1-138EABABFFD7}.Release|Win32.ActiveCfg = Release|Win32
+		{921522A6-91DF-4749-B8A1-138EABABFFD7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

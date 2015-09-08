@@ -1,0 +1,69 @@
+object.inf
+Ver=0.0.0
+        'NowLv As Integer        '현재 레벨
+        'NowHp As Long           '현재 체력
+        'NowXp As Long           '현재 경험치
+        'NowFi As Integer        '현재 발열량
+        
+        'MaxHp As Long           '최대 체력
+        'MaxXp As Long           '최대 경험치
+        'MaxFi As Integer        '최대 발열량
+        
+        'NowCast As Integer      '현재 시전중
+        'NowBuf(50) As Integer   '현재 버프
+        'NowDuf(50) As Integer   '현재 디버프
+        
+        'Spd As Integer          '이동속도
+        'AttkSp As Integer       '물리공격속도
+        'AttkAp As Integer       '시전가속도
+        
+        'CriPer As Integer       '치명타확률
+        'CriDam As Integer       '치명타데미지배율
+        'CriTar As Integer       '적중확률
+        
+        'NPyAtk As Integer       '기본물리데미지
+        'NPyArm As Integer       '기본물리방어
+        
+        'Admire As Integer       '평판
+        'Unions As String        '세력
+        
+        'Battlex As Boolean      '전투중 True
+        'MoveX As Boolean        '이동가능 True
+        'AttkX As Boolean        '공격가능 True
+
+	NPC
+		할리키네이드
+			Lv:99
+			NowHp:100000000
+			NowXp:0
+			MaxHp:100000000
+			MaxXp:50000
+			Spd:0
+			AttkSp:100
+			AttkAp:100
+			CriPer:50
+			CriDam:150
+			CriTar:100
+			NPyAtk:100000
+			NpyArm:500
+			Admire:50000
+			Unions:"영혼"
+			MoveX:false
+			AttkX:true
+			
+	MON
+		
+	MOB
+		박쥐
+			obj:Animated
+			spd:200
+			Duf:0
+			Buf:0
+			Bef.:/
+	NOB
+		화로
+			obj:Animated
+			spd:0
+			Duf:(#0002232)
+			Buf:(#0002231)
+			Buf:0

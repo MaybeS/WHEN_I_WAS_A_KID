@@ -1,0 +1,19 @@
+Private Declare Function SendMessage Lib "user32" Alias "SendMessageA" (ByVal _
+    hwnd As Long, ByVal wMsg As Long, ByVal wParam As Long, _
+    lParam As Any) As Long
+Private Const WM_PASTE = &H302
+
+Sub InsertPictureInRichTextBox(RTB As RichTextBox, Picture As StdPicture)
+    ' copy into the clipboard
+    ' Copy the picture into the clipboard.
+    Clipboard.Clear
+    Clipboard.SetData Picture
+    ' paste into the RichTextBox control
+    SendMessage RTB.hwnd, WM_PASTE, 0, 0
+End Sub
+
+
+
+
+
+ InsertPictureInRichTextBox RichTextBox1, LoadPicture("c:\winnt\coffee bean.bmp")

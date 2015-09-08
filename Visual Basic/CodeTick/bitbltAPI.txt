@@ -1,0 +1,15 @@
+Const BLACKNESS As Long = &H42                   	'목적 비트맵을 검정색으로 바꾼다.
+Const DSTINVERT As Long = &H550009                '목적 비트맵을 반전시킨다.
+Const MERGECOPY As Long = &HC000CA            '시작 비트맵과 패턴을 AND 연산 시킨다
+Const MERGEPAINT As Long = &HBB0226            '시작 비트맵과 패턴을 OR 연산 시킨다
+Const NOTSRCCOPY As Long = &H330008           '시작 비트맵을 반전시켜 복사한다.
+Const NOTSRCERASE As Long = &H1100A6         '시작과 목적 비트캡을 OR시킨후,반전시킨다.
+Const PATCOPY As Long = &HF00021&                '패턴을 복사한다.
+Const PATINVERT As Long = &H5A0049              '패턴을 반전시켜 복사한다.
+Const PATPAINT As Long = &HFB0A09&              '패턴 | ( NOT ( 소스 비트맵 OR 목적 비트맵)
+Const SRCAND As Long = &H8800C6                   '소스와 목적 비트맵을 AND 연산 시킨다
+Const SRCCOPY As Long = &HCC0020                '소스와 목적 비트맵 으로 복사시킨다
+Const SRCERASE As Long = &H440328                '소스와 목적 비트맵을 반전시킨 것에 AND 시킨다
+Const SRCINVERT As Long = &H660046               '소스와 목적 비트맵을 XOR 시킨다.
+Const SRCPAINT As Long = &HEE0086                '소스와 목적 비트맵을 OR 시킨다.
+Const WHITENESS As Long = &HFF0062&            '목적 비트맵을 흰색으로 바꾼다.

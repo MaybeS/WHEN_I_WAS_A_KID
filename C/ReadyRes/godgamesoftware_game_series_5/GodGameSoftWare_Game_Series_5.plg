@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GodGameSoftWare_Game_Series_5 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\권우석\AppData\Local\Temp\RSPFFB7.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/GodGameSoftWare_Game_Series_5.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\곤네꼬의보관\프로그래밍\완성프로젝트\API\GodGameSoftWare_Game_Series_5\WinMain.cpp"
+]
+Creating command line "cl.exe @"C:\Users\권우석\AppData\Local\Temp\RSPFFB7.tmp"" 
+Creating temporary file "C:\Users\권우석\AppData\Local\Temp\RSPFFC7.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/GodGameSoftWare_Game_Series_5.pdb" /debug /machine:I386 /out:"Debug/GodGameSoftWare_Game_Series_5.exe" /pdbtype:sept 
+".\Debug\CBullet.obj"
+".\Debug\CEnemy.obj"
+".\Debug\CGameHost.obj"
+".\Debug\CHp.obj"
+".\Debug\CPlayer.obj"
+".\Debug\WinMain.obj"
+".\Debug\Resource.res"
+]
+Creating command line "link.exe @"C:\Users\권우석\AppData\Local\Temp\RSPFFC7.tmp""
+<h3>Output Window</h3>
+Compiling...
+WinMain.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+GodGameSoftWare_Game_Series_5.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

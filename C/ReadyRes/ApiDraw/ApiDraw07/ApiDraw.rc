@@ -1,0 +1,273 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새 파일(&N)\tCtrl+N",         IDM_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",         IDM_FILE_OPEN
+        MENUITEM "저장(&S)...\tCtrl+S",         IDM_FILE_SAVE
+        MENUITEM "새 이름으로...(&A)",          IDM_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&X)",                    IDM_FILE_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "잘라내기(&T)\tCtrl+X",        IDM_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",            IDM_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",        IDM_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "삭제(&D)\tDel",               IDM_EDIT_DELETE
+    END
+    POPUP "도형(&S)"
+    BEGIN
+        MENUITEM "선택(&S)\tCtrl+Q",            IDM_SHAPE_SELECT
+        MENUITEM "직선(&L)\tCtrl+L",            IDM_SHAPE_LINE
+        MENUITEM "타원(&E)\tCtrl+E",            IDM_SHAPE_ELLIPSE
+        MENUITEM "사각형(&R)\tCtrl+R",          IDM_SHAPE_RECTANGLE
+        MENUITEM "텍스트(&T)...",               IDM_SHAPE_TEXT
+        MENUITEM "비트맵(&I)...",               IDM_SHAPE_BITMAP
+        MENUITEM "메타파일(&A)...",             IDM_SHAPE_META
+        MENUITEM SEPARATOR
+        MENUITEM "속성(&P)...",                 IDM_SHAPE_PROPERTY
+        MENUITEM SEPARATOR
+        MENUITEM "앞으로 이동(&F)",             IDM_SHAPE_FRONT
+        MENUITEM "뒤로 이동(&B)",               IDM_SHAPE_BACK
+        MENUITEM "맨 앞으로 이동(&M)",          IDM_SHAPE_MOSTFRONT
+        MENUITEM "맨 뒤로 이동(&K)",            IDM_SHAPE_MOSTBACK
+    END
+    POPUP "도구(&T)"
+    BEGIN
+        MENUITEM "안내선 설정(&G)...",          IDM_TOOL_GRID
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "프로그램 소개(&A)",           IDM_HELP_ABOUT
+    END
+END
+
+IDR_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "캔버스 팝업"
+    BEGIN
+        MENUITEM "삭제\tDel",                   IDM_POPUP_DELETE
+        MENUITEM "속성",                        IDM_POPUP_PROPERTY
+        MENUITEM SEPARATOR
+        MENUITEM "앞으로 이동",                 IDM_POPUP_FRONT
+        MENUITEM "뒤로 이동",                   IDM_POPUP_BACK
+        MENUITEM "맨 앞으로 이동",              IDM_POPUP_MOSTFRONT
+        MENUITEM "맨 뒤로 이동",                IDM_POPUP_MOSTBACK
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    "C",            IDM_EDIT_COPY,          VIRTKEY, CONTROL, NOINVERT
+    "E",            IDM_SHAPE_ELLIPSE,      VIRTKEY, CONTROL, NOINVERT
+    "L",            IDM_SHAPE_LINE,         VIRTKEY, CONTROL, NOINVERT
+    "N",            IDM_FILE_NEW,           VIRTKEY, CONTROL, NOINVERT
+    "O",            IDM_FILE_OPEN,          VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDM_SHAPE_SELECT,       VIRTKEY, CONTROL, NOINVERT
+    "R",            IDM_SHAPE_RECTANGLE,    VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_FILE_SAVE,          VIRTKEY, CONTROL, NOINVERT
+    "V",            IDM_EDIT_PASTE,         VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      IDM_EDIT_DELETE,        VIRTKEY, NOINVERT
+    "X",            IDM_EDIT_CUT,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPERTY DIALOG DISCARDABLE  0, 0, 249, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "속성"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "선굵기",IDC_STATIC,16,21,25,8
+    EDITTEXT        IDC_EDLINEWIDTH,45,15,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPLINEWIDTH,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,95,15,8,14
+    LTEXT           "선색상",IDC_STATIC,15,40,25,8
+    COMBOBOX        IDC_CBLINECOLOR,45,35,60,296,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "면색상",IDC_STATIC,15,65,25,8
+    COMBOBOX        IDC_CBPLANECOLOR,45,60,60,306,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "글꼴",IDC_STATIC,120,5,120,80
+    LTEXT           "이름",IDC_STATIC,130,20,17,8
+    COMBOBOX        IDC_CBFONTFACE,160,15,60,180,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "크기",IDC_STATIC,130,40,17,8
+    EDITTEXT        IDC_EDFONTSIZE,160,35,50,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPFONTSIZE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,210,35,8,
+                    14
+    LTEXT           "색상",IDC_STATIC,130,60,17,8
+    COMBOBOX        IDC_CBFONTCOLOR,160,55,60,322,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "확인",IDOK,70,95,50,14
+    PUSHBUTTON      "취소",IDCANCEL,130,95,50,14
+END
+
+IDD_GRID DIALOG DISCARDABLE  0, 0, 187, 109
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "안내선 설정"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "안내선",IDC_STATIC,5,5,30,8
+    LTEXT           "가로",IDC_STATIC,10,25,15,8
+    EDITTEXT        IDC_EDGRIDX,35,20,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "세로",IDC_STATIC,10,45,15,8
+    EDITTEXT        IDC_EDGRIDY,35,40,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "안내선 사용",IDC_CHKGRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,60,53,10
+    LTEXT           "안내선 보기",IDC_STATIC,95,5,40,8
+    LTEXT           "가로",IDC_STATIC,100,25,15,8
+    EDITTEXT        IDC_EDGRIDLINEX,125,20,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "세로",IDC_STATIC,100,45,15,8
+    EDITTEXT        IDC_EDGRIDLINEY,125,40,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "안내선 보기",IDC_CHKGRIDLINE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,60,53,10
+    DEFPUSHBUTTON   "확인",IDOK,38,85,50,14
+    PUSHBUTTON      "취소",IDCANCEL,98,85,50,14
+END
+
+IDD_TEXT DIALOG DISCARDABLE  0, 0, 187, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "문자열 편집"
+FONT 9, "굴림"
+BEGIN
+    EDITTEXT        IDC_EDSTR,5,10,175,80,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,35,95,50,14
+    PUSHBUTTON      "취소",IDCANCEL,100,95,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PROPERTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_GRID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_TEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APIDRAW             ICON    DISCARDABLE     "apidraw.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP  MOVEABLE PURE   "ToolBar.bmp"
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,133 @@
+'------------------------------------------------------------------------------
+'FILE DESCRIPTION: Test Container
+'------------------------------------------------------------------------------
+
+set NTGraph1 = TCForm.InsertControl("NTGRAPH.NTGraphCtrl.1","Graph")
+
+ NTGraph1.Caption = "Test Title"
+ NTGraph1.XLabel = "Test X Axis"
+ NTGraph1.YLabel = "Test Y Axis"
+
+' NTGraph1.FrameStyle = 2
+' NTGraph1.XLog = true
+' NTGraph1.YLog = true
+
+ NTGraph1.ElementIdentify = true
+ NTGraph1.TrackMode = 0
+
+ NTGraph1.XGridNumber = 2
+ NTGraph1.YGridNumber = 2
+
+
+sub Test1
+
+ NTGraph1.ClearGraph
+ ' Change the properties of default selected Graph Element (0)
+ NTGraph1.ElementLineColor = RGB(255,0,0)
+ NTGraph1.ElementPointColor = RGB(0,0,255)
+ NTGraph1.ElementWidth = 5
+ NTGraph1.ElementLinetype = 6
+ NTGraph1.ElementPointSymbol = 1
+ NTGraph1.ElementSolidPoint = false
+
+ NTGraph1.AddElement
+ NTGraph1.Element = 1
+ ' Change the properties of selected Graph Element (1)
+ NTGraph1.ElementLineColor = RGB(0,255,255)
+ NTGraph1.ElementPointColor = RGB(255,0,255)
+ NTGraph1.ElementWidth = 5
+ NTGraph1.ElementLinetype = 2
+ NTGraph1.ElementPointSymbol = 2
+
+
+ NTGraph1.AddElement
+ NTGraph1.Element = 2
+ ' Change the properties of selected Graph Element (2)
+ NTGraph1.ElementLineColor = RGB(255,255,0)
+ NTGraph1.ElementPointColor = RGB(125,50,125)
+ NTGraph1.ElementWidth = 5
+ NTGraph1.ElementLinetype = 1
+ NTGraph1.ElementPointSymbol = 3
+
+
+for i = 0 to 40
+	x = (i/2)*1.0
+	y = sin(x)*1.0
+    NTGraph1.PlotXY x,y,0
+
+	y = cos(x)
+    NTGraph1.PlotY y,1
+
+	y = sin(x)
+    NTGraph1.PlotY y,2
+ next
+ 
+ NTGraph1.SetRange 0, 10, -1, 1
+
+end sub
+
+sub Test2
+
+ NTGraph1.ClearGraph
+ NTGraph1.Element = 0
+ ' Change the plot color of selected Graph Element
+ NTGraph1.ElementLineColor = RGB(255,0,0)
+ NTGraph1.ElementPointColor = RGB(0,0,255)
+ NTGraph1.ElementWidth = 2
+ NTGraph1.ElementLinetype = 1
+ NTGraph1.ElementPointSymbol = 4
+ NTGraph1.ElementSolidPoint = true
+
+
+
+for i = 0 to 2000
+	x = (i*40/2000)-20
+	if x=0 then
+		x=0.0001
+	end if
+	y = exp(-((x*x)/50.))+sin((3.15*x))/x
+    NTGraph1.PlotXY x,y,0
+next
+
+NTGraph1.Autorange
+ 
+ NTGraph1.ShowProperties
+ 'NTGraph1.AboutBox
+end sub
+
+
+sub TestAnnotations
+  NTGraph1.AddAnnotation
+  NTGraph1.AnnoLabelCaption = "Test"
+  NTGraph1.AnnoLabelY = 0.5
+  NTGraph1.AnnoLabelX = 0.5
+  NTGraph1.AnnoLabelColor = RGB(255,255,255)
+  NTGraph1.AnnoLabelHorizontal = FALSE
+end sub 
+
+sub TestCursors
+  with NTGraph1
+	.AddCursor
+	.CursorX = 0.5
+	.CursorY = 0.5
+	.CursorColor = RGB(255,0,0)
+
+	.AddCursor
+	.CursorX = 0.2
+	.CursorY = 0.2
+	.CursorColor = RGB(0,255,0)
+
+	.Cursor = 1
+	.CursorMode = 1
+	end with
+end sub 
+
+
+sub TestAxesFormat
+  with NTGraph1 
+	.SetRange -1.345, 200.567, 1, 2000
+	.XTime = TRUE
+	.FormatAxisBottom = "%d/%m/%Y"
+    .FormatAxisLeft = "%e"
+  end with
+end sub 

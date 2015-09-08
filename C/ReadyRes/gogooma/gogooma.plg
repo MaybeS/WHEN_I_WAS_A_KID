@@ -1,0 +1,101 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: gogooma - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP218.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/gogooma.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\诀公\program\gogooma\FGame.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP218.tmp" 
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP219.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/gogooma.pdb" /machine:I386 /out:"Release/gogooma.exe" 
+".\Release\Frame.obj"
+".\Release\FSplash.obj"
+".\Release\FTitle.obj"
+".\Release\Gogooma.obj"
+".\Release\Bitmap.obj"
+".\Release\Drawer.obj"
+".\Release\Game.obj"
+".\Release\main.obj"
+".\Release\res.res"
+".\Release\GInput.obj"
+".\Release\FGame.obj"
+".\Release\Character.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP219.tmp"
+<h3>Output Window</h3>
+Compiling...
+FGame.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+gogooma.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: gogooma - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"Debug/res.res" /d "_DEBUG" "D:\诀公\program\gogooma\res.rc"" 
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP21B.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/gogooma.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\诀公\program\gogooma\Frame.cpp"
+"D:\诀公\program\gogooma\FSplash.cpp"
+"D:\诀公\program\gogooma\FTitle.cpp"
+"D:\诀公\program\gogooma\Gogooma.cpp"
+"D:\诀公\program\gogooma\Bitmap.cpp"
+"D:\诀公\program\gogooma\Drawer.cpp"
+"D:\诀公\program\gogooma\Game.cpp"
+"D:\诀公\program\gogooma\main.cpp"
+"D:\诀公\program\gogooma\GInput.cpp"
+"D:\诀公\program\gogooma\FGame.cpp"
+"D:\诀公\program\gogooma\Character.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP21B.tmp" 
+Creating temporary file "C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP21C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/gogooma.pdb" /debug /machine:I386 /out:"Debug/gogooma.exe" /pdbtype:sept 
+".\Debug\Frame.obj"
+".\Debug\FSplash.obj"
+".\Debug\FTitle.obj"
+".\Debug\Gogooma.obj"
+".\Debug\Bitmap.obj"
+".\Debug\Drawer.obj"
+".\Debug\Game.obj"
+".\Debug\main.obj"
+".\Debug\res.res"
+".\Debug\GInput.obj"
+".\Debug\FGame.obj"
+".\Debug\Character.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\DHS\LOCALS~1\Temp\RSP21C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Frame.cpp
+FSplash.cpp
+FTitle.cpp
+Gogooma.cpp
+Bitmap.cpp
+Drawer.cpp
+Game.cpp
+main.cpp
+GInput.cpp
+FGame.cpp
+Character.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+gogooma.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

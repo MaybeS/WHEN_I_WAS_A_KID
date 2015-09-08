@@ -1,0 +1,29 @@
+#!Main.AI script://
+#!presented by maybe studio
+#! AIC as AIcreateive files
+#! AIS as AIscript files
+##AIScript##
+Set %AIname% as AI.name
+Set %root% as project.root
+
+Include Set [/] %AIname%.aic
+Include Set [/] \sub.ais
+Bring Set [/] %AIname%.aic
+Bring Set [/] &aic [/] get_name
+Bring Set [/] &aic [/] get_process
+Bring Set [/] &aic [/] get_Kernel
+Bring Set [/] &aic [/] get_key
+
+
+Set general(10) as integer
+
+N_key=get_key[keyindex]
+N_locate=%root%
+N_Username=%username%
+N_AIname=%rootname%
+N_P=-0
+N_S=-1
+N_AIname\%rootR % set [/] R();
+
+
+%R% (savesetting [A] );

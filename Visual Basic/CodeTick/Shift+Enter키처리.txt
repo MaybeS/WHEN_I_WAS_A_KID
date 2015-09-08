@@ -1,0 +1,15 @@
+Private Const VK_SHIFT As Long = &H10
+ 
+Private Declare Function GetAsyncKeyState Lib "user32.dll" (ByVal vKey As Long) As Integer
+ 
+Private Sub Text1_KeyPress(KeyAscii As Integer)
+ 
+  Dim lintShift As Integer
+ 
+  lintShift = GetAsyncKeyState(VK_SHIFT)
+  If (lintShift And &H8000) And (KeyAscii = vbKeyReturn) Then
+    KeyAscii = 0
+    ''** Shift+Return 키 처리코드...
+  End If
+ 
+End Sub

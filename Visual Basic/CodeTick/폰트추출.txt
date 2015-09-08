@@ -1,0 +1,63 @@
+Private Declare Function GetDC Lib "user32" (ByVal hwnd As Long) As Long
+Private Declare Function ReleaseDC Lib "user32" (ByVal hwnd As Long, ByVal hdc As Long) As Long
+Private Declare Function EnumFontFamilies Lib "gdi32" Alias "EnumFontFamiliesA" (ByVal hdc As Long, ByVal lpszFamily As String, ByVal lpEnumFontFamProc As Long, lParam As Any) As Long
+Global Const LF_FACESIZE = 32
+Type LOGFONT
+    lfheight As Integer
+    lfwidth As Integer
+    lfEscapement As Integer
+    lforientation As Integer
+    lfWeight As Integer
+    lfItalic As String * 1
+    lfUnderline As String * 1
+    lfStrikeout As String * 1
+    lfCharSet As String * 1
+    lfOutPrecision As String * 1
+    lfClipPrecision As String * 1
+    lfQuality As String * 1
+    lfPitchAndFamily As String * 1
+    lfFaceName As String * LF_FACESIZE
+End Type
+Type TEXTMETRIC
+    tmHeight As Integer
+    tmAscent As Integer
+    tmDescent As Integer
+    tmInternalLeading As Integer
+    tmExternalLeading As Integer
+    tmAveCharWidth As Integer
+    tmMaxCharWidth As Integer
+    tmWeight As Integer
+    tmItalic As String * 1
+    tmUnderlined As String * 1
+    tmStruckout As String * 1
+    tmFirstChar As String * 1
+    tmLastChar As String * 1
+    tmDefaultChar As String * 1
+    tmBreakChar As String * 1
+    tmPitchAndFamily As String * 1
+    tmCharSet As String * 1
+    tmOverhang As Integer
+    tmDigitizedAspectX As Integer
+    tmDigitizedAspectY As Integer
+End Type
+
+Public Function AddFonts(Combo1 As ComboBox)
+Dim hdc As Long
+Combo1.Clear
+hdc = GetDC(Combo1.hwnd)
+EnumFontFamilies hdc, vbNullString, AddressOf EnumFontFamProc, Combo1
+ReleaseDC Combo1.hwnd, hdc
+End Function
+
+Private Function EnumFontFamProc(lpNLF As LOGFONT, lpNTM As TEXTMETRIC, ByVal FontType As Long, lParam As ComboBox) As Long
+On Error GoTo ErrHandler
+Dim FaceName As String
+FaceName = StrConv(lpNLF.lfFaceName, vbUnicode)
+lParam.AddItem Mid$(FaceName, 3, InStr(FaceName, vbNullChar) - 1)
+EnumFontFamProc = 1
+Exit Function
+ErrHandler:
+MsgBox "알수없는 오류가 발생하였습니다.", vbCritical, "오류"
+End Function
+[출처] [VB6.0][자작 모듈] 시스템 폰트목록 추출하기|작성자 엘련
+

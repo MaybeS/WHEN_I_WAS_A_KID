@@ -1,0 +1,11 @@
+﻿빌드 시작: 10월 30일 목요일 오후 7:09:00
+     1>2 노드의 "D:\Develope\Visual Studio C++\ReadyRes\win32_test4\win32_test4.vcxproj" 프로젝트(Build 대상)입니다.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(D:\Develope\Visual Studio C++\ReadyRes\win32_test4\Debug\win32_test4.exe) does not match the Linker's OutputFile property value (D:\Develope\Visual Studio C++\ReadyRes\win32_test4\Debug\win32_test2.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(win32_test4) does not match the Linker's OutputFile property value (win32_test2). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>Link:
+         win32_test4.vcxproj -> D:\Develope\Visual Studio C++\ReadyRes\win32_test4\Debug\win32_test4.exe
+     1>"D:\Develope\Visual Studio C++\ReadyRes\win32_test4\win32_test4.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.42

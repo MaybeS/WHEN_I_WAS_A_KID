@@ -1,0 +1,154 @@
+[Root]
+Most Recent Package=Dep File 1
+
+
+[Package|CrisSetup|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present
+
+[Package|CrisSetup|Configure DAO ISAMs]
+Applicable=No
+
+[Package|CrisSetup|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|CrisSetup|Files Found]
+
+[Package|CrisSetup|Files Released]
+
+[Package|CrisSetup|Missing Dependency Information]
+
+[Package|CrisSetup|Out-of-Date Dependency Information]
+C:\Windows\System32\COMCTL32.OCX=
+
+[Package|CrisSetup|Files Added]
+
+[Package|CrisSetup|Files Removed]
+
+[Package|CrisSetup|Files In Project]
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris.exe\Cris.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\VB6KO.DLL=Yes
+C:\Windows\System32\COMCTL32.OCX=Yes
+C:\Windows\System32\CMCTLKO.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|CrisSetup|Configure Registry Files]
+Applicable=No
+
+[Package|CrisSetup|Configure Remote Servers]
+Applicable=No
+
+[Package|CrisSetup|Install Locations]
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris.exe\Cris.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB6KO.DLL=$(WinSysPath)
+C:\Windows\System32\COMCTL32.OCX=$(WinSysPath)
+C:\Windows\System32\CMCTLKO.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|CrisSetup|Configure Shared Files]
+Applicable=Yes
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris.exe\Cris.exe=No
+
+[Package|CrisSetup|Distribution]
+Type=single
+Size=1.44 MB
+Title=Cris
+
+[Package|CrisSetup|Package]
+PackageFolder=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present
+ProjectFolder=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris
+ServerSideCab=
+File1=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present\setup.exe
+File2=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present\Setup.Lst
+File3=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present\Cris.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+
+[Package|Dep File 1|Files Released]
+
+[Package|Dep File 1|Missing Dependency Information]
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+C:\Windows\System32\COMCTL32.OCX=
+
+[Package|Dep File 1|Files Added]
+
+[Package|Dep File 1|Files Removed]
+
+[Package|Dep File 1|Files In Project]
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris.exe\Cris.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\VB6KO.DLL=Yes
+C:\Windows\System32\COMCTL32.OCX=Yes
+C:\Windows\System32\CMCTLKO.DLL=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=
+
+[Package|Dep File 1|Install Locations]
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris.exe\Cris.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB6KO.DLL=$(WinSysPath)
+C:\Windows\System32\COMCTL32.OCX=$(WinSysPath)
+C:\Windows\System32\CMCTLKO.DLL=$(WinSysPath)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=
+
+[Package|Dep File 1|DepFile]
+DepCabFile=Cris.CAB
+DepCabRun=Cris.INF
+
+[Package|Dep File 1|Package]
+PackageFolder=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present
+ProjectFolder=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris
+ServerSideCab=
+File1=D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Cris\Present\Cris.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

@@ -1,0 +1,25 @@
+Download the trial version of Visual Studio 2010 Trial
+Extract the files from the ISO, i.e. use winrar
+In the Setup folder there is a file called setup.sdb
+this is a normal text file that you need to open up with notepad
+On line 123, change:
+LicenseKey=6F0510EB-FF8F-47ec-96E1-78FB4B955330
+to be:
+LicenseKey=44264498-AE1C-4198-9DD2-017769D02BE4
+
+
+and on line 141, change:
+[Product Key]
+YR3W8FCM2B7BKF9HMQFTCH7WK
+to be:
+
+[Product Key]
+YCFHQ9DWCYDKV88T2TMHG7BHP
+Run the install program, i.e. setup.exe.
+
+Obviously I've not been able to run this for 30/90 days, but
+on the About menu, "Register Product", the product states
+"A valid product key has been entered for Microsoft Visual Studio."
+Also if you go in to control panel, and select Change on VS2010 Ultimate
+It will give an change to enter a purchased product key, this is no longer
+visible.

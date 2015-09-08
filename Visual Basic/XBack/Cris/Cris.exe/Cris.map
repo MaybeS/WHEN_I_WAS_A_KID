@@ -1,0 +1,984 @@
+ Cris
+
+ Timestamp is 53e271dd (Thu Aug 07 03:20:13 2014)
+
+ Preferred load address is 00400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000001fcH .idata$5                CODE
+ 0001:00000200 00000620H .rdata                  CODE
+ 0001:00000820 000862b0H .text                   CODE
+ 0001:00086ad0 00000004H .text$0                 CODE
+ 0001:00086ae0 000129e0H .text$1                 CODE
+ 0001:000994c0 00000004H .text$2                 CODE
+ 0001:000994c4 00000014H .idata$2                CODE
+ 0001:000994d8 00000014H .idata$3                CODE
+ 0001:000994ec 000001fcH .idata$4                CODE
+ 0001:000996e8 000006a4H .idata$6                CODE
+ 0001:00099d8c 00000000H .edata                  CODE
+ 0002:00000000 00000004H .data                   DATA
+ 0002:00000008 00002df8H .bss                    DATA
+ 0003:00000000 000002f8H .rsrc$01                DATA
+ 0003:00000300 000087fcH .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0001:00000000       __imp_@__vbaVarTstGt       00401000     Cris.OBJ
+ 0001:00000000       __imp____vbaVarTstGt       00401000     Cris.OBJ
+ 0001:00000004       __imp____vbaVarSub         00401004     Cris.OBJ
+ 0001:00000004       __imp_@__vbaVarSub         00401004     Cris.OBJ
+ 0001:00000008       __imp____vbaStrI2          00401008     Cris.OBJ
+ 0001:00000008       __imp_@__vbaStrI2          00401008     Cris.OBJ
+ 0001:0000000c       __imp____vba@083C7800      0040100c     Cris.OBJ
+ 0001:0000000c       __imp_@__vba@083C7800      0040100c     Cris.OBJ
+ 0001:00000010       __imp___CIcos              00401010     Cris.OBJ
+ 0001:00000014       __imp___adj_fptan          00401014     Cris.OBJ
+ 0001:00000018       __imp_@__vbaStrI4          00401018     Cris.OBJ
+ 0001:00000018       __imp____vbaStrI4          00401018     Cris.OBJ
+ 0001:0000001c       __imp_@__vbaVarMove        0040101c     Cris.OBJ
+ 0001:0000001c       __imp____vbaVarMove        0040101c     Cris.OBJ
+ 0001:00000020       __imp_@__vbaVarVargNofree  00401020     Cris.OBJ
+ 0001:00000020       __imp____vbaVarVargNofree  00401020     Cris.OBJ
+ 0001:00000024       __imp____vbaFreeVar        00401024     Cris.OBJ
+ 0001:00000024       __imp_@__vbaFreeVar        00401024     Cris.OBJ
+ 0001:00000028       __imp____vba@083C74A4      00401028     Cris.OBJ
+ 0001:00000028       __imp_@__vba@083C74A4      00401028     Cris.OBJ
+ 0001:0000002c       __imp____vbaLenBstr        0040102c     Cris.OBJ
+ 0001:0000002c       __imp_@__vbaLenBstr        0040102c     Cris.OBJ
+ 0001:00000030       __imp____vbaLineInputStr   00401030     Cris.OBJ
+ 0001:00000030       __imp_@__vbaLineInputStr   00401030     Cris.OBJ
+ 0001:00000034       __imp_@__vbaStrVarMove     00401034     Cris.OBJ
+ 0001:00000034       __imp____vbaStrVarMove     00401034     Cris.OBJ
+ 0001:00000038       __imp____vbaFreeVarList    00401038     Cris.OBJ
+ 0001:00000038       __imp_@__vbaFreeVarList    00401038     Cris.OBJ
+ 0001:0000003c       __imp____vbaEnd            0040103c     Cris.OBJ
+ 0001:0000003c       __imp_@__vbaEnd            0040103c     Cris.OBJ
+ 0001:00000040       __imp___adj_fdiv_m64       00401040     Cris.OBJ
+ 0001:00000044       __imp____vbaRaiseEvent     00401044     Cris.OBJ
+ 0001:00000044       __imp_@__vbaRaiseEvent     00401044     Cris.OBJ
+ 0001:00000048       __imp____vbaFreeObjList    00401048     Cris.OBJ
+ 0001:00000048       __imp_@__vbaFreeObjList    00401048     Cris.OBJ
+ 0001:0000004c       __imp____vba@083CAF24      0040104c     Cris.OBJ
+ 0001:0000004c       __imp_@__vba@083CAF24      0040104c     Cris.OBJ
+ 0001:00000050       __imp___adj_fprem1         00401050     Cris.OBJ
+ 0001:00000054       __imp____vbaStrCat         00401054     Cris.OBJ
+ 0001:00000054       __imp_@__vbaStrCat         00401054     Cris.OBJ
+ 0001:00000058       __imp_@__vba@07D3CF48      00401058     Cris.OBJ
+ 0001:00000058       __imp____vba@07D3CF48      00401058     Cris.OBJ
+ 0001:0000005c       __imp_@__vbaSetSystemError 0040105c     Cris.OBJ
+ 0001:0000005c       __imp____vbaSetSystemError 0040105c     Cris.OBJ
+ 0001:00000060       __imp____vbaLenBstrB       00401060     Cris.OBJ
+ 0001:00000060       __imp_@__vbaLenBstrB       00401060     Cris.OBJ
+ 0001:00000064       __imp_@__vbaHresultCheckObj 00401064     Cris.OBJ
+ 0001:00000064       __imp____vbaHresultCheckObj 00401064     Cris.OBJ
+ 0001:00000068       __imp____vbaLenVar         00401068     Cris.OBJ
+ 0001:00000068       __imp_@__vbaLenVar         00401068     Cris.OBJ
+ 0001:0000006c       __imp___adj_fdiv_m32       0040106c     Cris.OBJ
+ 0001:00000070       __imp_@__vbaAryDestruct    00401070     Cris.OBJ
+ 0001:00000070       __imp____vbaAryDestruct    00401070     Cris.OBJ
+ 0001:00000074       __imp_@__vbaStrBool        00401074     Cris.OBJ
+ 0001:00000074       __imp____vbaStrBool        00401074     Cris.OBJ
+ 0001:00000078       __imp_@__vba@083C9CD0      00401078     Cris.OBJ
+ 0001:00000078       __imp____vba@083C9CD0      00401078     Cris.OBJ
+ 0001:0000007c       __imp____vbaExitProc       0040107c     Cris.OBJ
+ 0001:0000007c       __imp_@__vbaExitProc       0040107c     Cris.OBJ
+ 0001:00000080       __imp____vbaBoolStr        00401080     Cris.OBJ
+ 0001:00000080       __imp_@__vbaBoolStr        00401080     Cris.OBJ
+ 0001:00000084       __imp_@__vba@083C9924      00401084     Cris.OBJ
+ 0001:00000084       __imp____vba@083C9924      00401084     Cris.OBJ
+ 0001:00000088       __imp_@__vbaOnError        00401088     Cris.OBJ
+ 0001:00000088       __imp____vbaOnError        00401088     Cris.OBJ
+ 0001:0000008c       __imp_@__vba@07D3BD74      0040108c     Cris.OBJ
+ 0001:0000008c       __imp____vba@07D3BD74      0040108c     Cris.OBJ
+ 0001:00000090       __imp_@__vbaObjSet         00401090     Cris.OBJ
+ 0001:00000090       __imp____vbaObjSet         00401090     Cris.OBJ
+ 0001:00000094       __imp___adj_fdiv_m16i      00401094     Cris.OBJ
+ 0001:00000098       __imp_@__vbaObjSetAddref   00401098     Cris.OBJ
+ 0001:00000098       __imp____vbaObjSetAddref   00401098     Cris.OBJ
+ 0001:0000009c       __imp___adj_fdivr_m16i     0040109c     Cris.OBJ
+ 0001:000000a0       __imp____vbaVarIndexLoad   004010a0     Cris.OBJ
+ 0001:000000a0       __imp_@__vbaVarIndexLoad   004010a0     Cris.OBJ
+ 0001:000000a4       __imp_@__vbaFpR4           004010a4     Cris.OBJ
+ 0001:000000a4       __imp____vbaFpR4           004010a4     Cris.OBJ
+ 0001:000000a8       __imp____vba@083CE518      004010a8     Cris.OBJ
+ 0001:000000a8       __imp_@__vba@083CE518      004010a8     Cris.OBJ
+ 0001:000000ac       __imp____vbaBoolVarNull    004010ac     Cris.OBJ
+ 0001:000000ac       __imp_@__vbaBoolVarNull    004010ac     Cris.OBJ
+ 0001:000000b0       __imp_@__vbaVarTstLt       004010b0     Cris.OBJ
+ 0001:000000b0       __imp____vbaVarTstLt       004010b0     Cris.OBJ
+ 0001:000000b4       __imp_@__vbaFpR8           004010b4     Cris.OBJ
+ 0001:000000b4       __imp____vbaFpR8           004010b4     Cris.OBJ
+ 0001:000000b8       __imp___CIsin              004010b8     Cris.OBJ
+ 0001:000000bc       __imp_@__vba@083CB704      004010bc     Cris.OBJ
+ 0001:000000bc       __imp____vba@083CB704      004010bc     Cris.OBJ
+ 0001:000000c0       __imp____vbaErase          004010c0     Cris.OBJ
+ 0001:000000c0       __imp_@__vbaErase          004010c0     Cris.OBJ
+ 0001:000000c4       __imp____vbaVarCmpGt       004010c4     Cris.OBJ
+ 0001:000000c4       __imp_@__vbaVarCmpGt       004010c4     Cris.OBJ
+ 0001:000000c8       __imp_@__vba@083C8194      004010c8     Cris.OBJ
+ 0001:000000c8       __imp____vba@083C8194      004010c8     Cris.OBJ
+ 0001:000000cc       __imp____vbaChkstk         004010cc     Cris.OBJ
+ 0001:000000d0       __imp____vbaFileClose      004010d0     Cris.OBJ
+ 0001:000000d0       __imp_@__vbaFileClose      004010d0     Cris.OBJ
+ 0001:000000d8       __imp____vbaGenerateBoundsError 004010d8     Cris.OBJ
+ 0001:000000d8       __imp_@__vbaGenerateBoundsError 004010d8     Cris.OBJ
+ 0001:000000dc       __imp____vbaStrCmp         004010dc     Cris.OBJ
+ 0001:000000dc       __imp_@__vbaStrCmp         004010dc     Cris.OBJ
+ 0001:000000e0       __imp____vbaVarTstEq       004010e0     Cris.OBJ
+ 0001:000000e0       __imp_@__vbaVarTstEq       004010e0     Cris.OBJ
+ 0001:000000e8       __imp_@__vbaVarLateMemSt   004010e8     Cris.OBJ
+ 0001:000000e8       __imp____vbaVarLateMemSt   004010e8     Cris.OBJ
+ 0001:000000ec       __imp____vbaCastObjVar     004010ec     Cris.OBJ
+ 0001:000000ec       __imp_@__vbaCastObjVar     004010ec     Cris.OBJ
+ 0001:000000f0       __imp___adj_fpatan         004010f0     Cris.OBJ
+ 0001:000000f4       __imp____vbaR4Var          004010f4     Cris.OBJ
+ 0001:000000f4       __imp_@__vbaR4Var          004010f4     Cris.OBJ
+ 0001:000000f8       __imp____vbaLateIdCallLd   004010f8     Cris.OBJ
+ 0001:000000f8       __imp_@__vbaLateIdCallLd   004010f8     Cris.OBJ
+ 0001:000000fc       __imp____vbaRedim          004010fc     Cris.OBJ
+ 0001:000000fc       __imp_@__vbaRedim          004010fc     Cris.OBJ
+ 0001:00000104       __imp_@__vba@083C93FC      00401104     Cris.OBJ
+ 0001:00000104       __imp____vba@083C93FC      00401104     Cris.OBJ
+ 0001:00000108       __imp___CIsqrt             00401108     Cris.OBJ
+ 0001:0000010c       __imp_@__vbaVarAnd         0040110c     Cris.OBJ
+ 0001:0000010c       __imp____vbaVarAnd         0040110c     Cris.OBJ
+ 0001:00000114       __imp____vbaVarMul         00401114     Cris.OBJ
+ 0001:00000114       __imp_@__vbaVarMul         00401114     Cris.OBJ
+ 0001:00000118       __imp____vbaExceptHandler  00401118     Cris.OBJ
+ 0001:0000011c       __imp_@__vba@083CAEEC      0040111c     Cris.OBJ
+ 0001:0000011c       __imp____vba@083CAEEC      0040111c     Cris.OBJ
+ 0001:00000120       __imp_@__vbaPrintFile      00401120     Cris.OBJ
+ 0001:00000120       __imp____vbaPrintFile      00401120     Cris.OBJ
+ 0001:00000124       __imp_@__vbaStrToUnicode   00401124     Cris.OBJ
+ 0001:00000124       __imp____vbaStrToUnicode   00401124     Cris.OBJ
+ 0001:00000128       __imp___adj_fprem          00401128     Cris.OBJ
+ 0001:0000012c       __imp___adj_fdivr_m64      0040112c     Cris.OBJ
+ 0001:00000130       __imp____vbaVarDiv         00401130     Cris.OBJ
+ 0001:00000130       __imp_@__vbaVarDiv         00401130     Cris.OBJ
+ 0001:00000134       __imp_@__vbaVarCmpLe       00401134     Cris.OBJ
+ 0001:00000134       __imp____vbaVarCmpLe       00401134     Cris.OBJ
+ 0001:00000138       __imp____vbaFPException    00401138     Cris.OBJ
+ 0001:0000013c       __imp____vba@083C95EC      0040113c     Cris.OBJ
+ 0001:0000013c       __imp_@__vba@083C95EC      0040113c     Cris.OBJ
+ 0001:00000140       __imp____vbaStrVarVal      00401140     Cris.OBJ
+ 0001:00000140       __imp_@__vbaStrVarVal      00401140     Cris.OBJ
+ 0001:00000144       __imp____vbaVarCat         00401144     Cris.OBJ
+ 0001:00000144       __imp_@__vbaVarCat         00401144     Cris.OBJ
+ 0001:00000148       __imp____vbaI2Var          00401148     Cris.OBJ
+ 0001:00000148       __imp_@__vbaI2Var          00401148     Cris.OBJ
+ 0001:0000014c       __imp___CIlog              0040114c     Cris.OBJ
+ 0001:00000150       __imp____vbaFileOpen       00401150     Cris.OBJ
+ 0001:00000150       __imp_@__vbaFileOpen       00401150     Cris.OBJ
+ 0001:00000154       __imp_@__vbaInStr          00401154     Cris.OBJ
+ 0001:00000154       __imp____vbaInStr          00401154     Cris.OBJ
+ 0001:00000158       __imp____vbaNew2           00401158     Cris.OBJ
+ 0001:00000158       __imp_@__vbaNew2           00401158     Cris.OBJ
+ 0001:0000015c       __imp___adj_fdiv_m32i      0040115c     Cris.OBJ
+ 0001:00000160       __imp___adj_fdivr_m32i     00401160     Cris.OBJ
+ 0001:00000164       __imp____vba@083CAF5C      00401164     Cris.OBJ
+ 0001:00000164       __imp_@__vba@083CAF5C      00401164     Cris.OBJ
+ 0001:00000168       __imp____vbaStrCopy        00401168     Cris.OBJ
+ 0001:00000168       __imp_@__vbaStrCopy        00401168     Cris.OBJ
+ 0001:0000016c       __imp_@__vbaVarCmpLt       0040116c     Cris.OBJ
+ 0001:0000016c       __imp____vbaVarCmpLt       0040116c     Cris.OBJ
+ 0001:00000170       __imp____vbaFreeStrList    00401170     Cris.OBJ
+ 0001:00000170       __imp_@__vbaFreeStrList    00401170     Cris.OBJ
+ 0001:00000174       __imp___adj_fdivr_m32      00401174     Cris.OBJ
+ 0001:00000178       __imp____vbaPowerR8        00401178     Cris.OBJ
+ 0001:00000178       __imp_@__vbaPowerR8        00401178     Cris.OBJ
+ 0001:0000017c       __imp___adj_fdiv_r         0040117c     Cris.OBJ
+ 0001:00000184       __imp_@__vbaI4Var          00401184     Cris.OBJ
+ 0001:00000184       __imp____vbaI4Var          00401184     Cris.OBJ
+ 0001:00000188       __imp_@__vba@083C7838      00401188     Cris.OBJ
+ 0001:00000188       __imp____vba@083C7838      00401188     Cris.OBJ
+ 0001:0000018c       __imp____vbaVarAdd         0040118c     Cris.OBJ
+ 0001:0000018c       __imp_@__vbaVarAdd         0040118c     Cris.OBJ
+ 0001:00000190       __imp____vbaStrToAnsi      00401190     Cris.OBJ
+ 0001:00000190       __imp_@__vbaStrToAnsi      00401190     Cris.OBJ
+ 0001:00000194       __imp____vbaVarDup         00401194     Cris.OBJ
+ 0001:00000194       __imp_@__vbaVarDup         00401194     Cris.OBJ
+ 0001:00000198       __imp____vbaFpI2           00401198     Cris.OBJ
+ 0001:00000198       __imp_@__vbaFpI2           00401198     Cris.OBJ
+ 0001:0000019c       __imp____vbaVarMod         0040119c     Cris.OBJ
+ 0001:0000019c       __imp_@__vbaVarMod         0040119c     Cris.OBJ
+ 0001:000001a0       __imp_@__vbaVarLateMemCallLd 004011a0     Cris.OBJ
+ 0001:000001a0       __imp____vbaVarLateMemCallLd 004011a0     Cris.OBJ
+ 0001:000001a4       __imp____vba@083C94CC      004011a4     Cris.OBJ
+ 0001:000001a4       __imp_@__vba@083C94CC      004011a4     Cris.OBJ
+ 0001:000001a8       __imp_@__vbaVarCopy        004011a8     Cris.OBJ
+ 0001:000001a8       __imp____vbaVarCopy        004011a8     Cris.OBJ
+ 0001:000001ac       __imp____vbaFpI4           004011ac     Cris.OBJ
+ 0001:000001ac       __imp_@__vbaFpI4           004011ac     Cris.OBJ
+ 0001:000001b0       __imp____vbaR8IntI2        004011b0     Cris.OBJ
+ 0001:000001b0       __imp_@__vbaR8IntI2        004011b0     Cris.OBJ
+ 0001:000001b4       __imp____vba@083C80D8      004011b4     Cris.OBJ
+ 0001:000001b4       __imp_@__vba@083C80D8      004011b4     Cris.OBJ
+ 0001:000001b8       __imp___CIatan             004011b8     Cris.OBJ
+ 0001:000001bc       __imp____vba@083CB6CC      004011bc     Cris.OBJ
+ 0001:000001bc       __imp_@__vba@083CB6CC      004011bc     Cris.OBJ
+ 0001:000001c0       __imp_@__vbaCastObj        004011c0     Cris.OBJ
+ 0001:000001c0       __imp____vbaCastObj        004011c0     Cris.OBJ
+ 0001:000001c4       __imp____vbaStrMove        004011c4     Cris.OBJ
+ 0001:000001c4       __imp_@__vbaStrMove        004011c4     Cris.OBJ
+ 0001:000001c8       __imp____vba@083C7418      004011c8     Cris.OBJ
+ 0001:000001c8       __imp_@__vba@083C7418      004011c8     Cris.OBJ
+ 0001:000001cc       __imp___allmul             004011cc     Cris.OBJ
+ 0001:000001d0       __imp_@__vbaLenVarB        004011d0     Cris.OBJ
+ 0001:000001d0       __imp____vbaLenVarB        004011d0     Cris.OBJ
+ 0001:000001d4       __imp____vbaLateIdSt       004011d4     Cris.OBJ
+ 0001:000001d4       __imp_@__vbaLateIdSt       004011d4     Cris.OBJ
+ 0001:000001d8       __imp___CItan              004011d8     Cris.OBJ
+ 0001:000001dc       __imp_@__vba@07D3CF80      004011dc     Cris.OBJ
+ 0001:000001dc       __imp____vba@07D3CF80      004011dc     Cris.OBJ
+ 0001:000001e0       __imp_@__vbaFPInt          004011e0     Cris.OBJ
+ 0001:000001e0       __imp____vbaFPInt          004011e0     Cris.OBJ
+ 0001:000001e4       __imp___CIexp              004011e4     Cris.OBJ
+ 0001:000001e8       __imp____vbaRecAssign      004011e8     Cris.OBJ
+ 0001:000001e8       __imp_@__vbaRecAssign      004011e8     Cris.OBJ
+ 0001:000001ec       __imp_@__vbaFreeObj        004011ec     Cris.OBJ
+ 0001:000001ec       __imp____vbaFreeObj        004011ec     Cris.OBJ
+ 0001:000001f0       __imp_@__vbaFreeStr        004011f0     Cris.OBJ
+ 0001:000001f0       __imp____vbaFreeStr        004011f0     Cris.OBJ
+ 0001:000001f4       __imp_@__vba@083C815C      004011f4     Cris.OBJ
+ 0001:000001f4       __imp____vba@083C815C      004011f4     Cris.OBJ
+ 0001:00000228       __real@4@4004f000000000000000 00401228     Noti.OBJ
+ 0001:0000022c       __real@4@40048400000000000000 0040122c     Noti.OBJ
+ 0001:00000240       __real@8@3fff8000000000000000 00401240     Noti.OBJ
+ 0001:00000248       __real@8@4002a000000000000000 00401248     Noti.OBJ
+ 0001:00000250       __real@4@3fff8000000000000000 00401250     Noti.OBJ
+ 0001:000002f8       __real@4@c00bf168000000000000 004012f8     Mbas.OBJ
+ 0001:000002fc       __real@4@400bf168000000000000 004012fc     Mbas.OBJ
+ 0001:00000300       __real@4@c00bf230000000000000 00401300     Mbas.OBJ
+ 0001:00000304       __real@4@00000000000000000000 00401304     Mbas.OBJ
+ 0001:00000308       __real@4@4001e000000000000000 00401308     Mbas.OBJ
+ 0001:0000030c       __real@4@4002a000000000000000 0040130c     Mbas.OBJ
+ 0001:00000310       __real@4@4000c000000000000000 00401310     Mbas.OBJ
+ 0001:00000314       __real@4@4001a000000000000000 00401314     Mbas.OBJ
+ 0001:00000318       __real@4@4007bb80000000000000 00401318     Mbas.OBJ
+ 0001:00000330       __real@4@bfff8000000000000000 00401330     Mbas.OBJ
+ 0001:00000334       __real@4@40018000000000000000 00401334     Mbas.OBJ
+ 0001:00000338       __real@8@40008000000000000000 00401338     Mbas.OBJ
+ 0001:00000398       __real@8@4005e600000000000000 00401398     Mbas.OBJ
+ 0001:000003a0       __real@8@4003f000000000000000 004013a0     Mbas.OBJ
+ 0001:000003c8       __real@4@4003c000000000000000 004013c8     Bbas.OBJ
+ 0001:000003cc       __real@4@4003b800000000000000 004013cc     Bbas.OBJ
+ 0001:000003d0       __real@4@4002f000000000000000 004013d0     Bbas.OBJ
+ 0001:000003d8       __real@8@4000c000000000000000 004013d8     Bbas.OBJ
+ 0001:000003f0       __real@8@4005c800000000000000 004013f0     Bbas.OBJ
+ 0001:00000458       __real@8@3fffc000000000000000 00401458     Bbas.OBJ
+ 0001:00000460       __real@8@40038000000000000000 00401460     Bbas.OBJ
+ 0001:00000468       __real@8@40048000000000000000 00401468     Bbas.OBJ
+ 0001:00000470       __real@8@4002f000000000000000 00401470     Bbas.OBJ
+ 0001:00000478       __real@8@40058000000000000000 00401478     Bbas.OBJ
+ 0001:00000480       __real@8@4004b000000000000000 00401480     Bbas.OBJ
+ 0001:00000498       __real@4@4007d400000000000000 00401498     Notifi.OBJ
+ 0001:0000049c       __real@4@4007b400000000000000 0040149c     Notifi.OBJ
+ 0001:000004a0       __real@4@40079800000000000000 004014a0     Notifi.OBJ
+ 0001:000004a4       __real@4@4006f000000000000000 004014a4     Notifi.OBJ
+ 0001:000004a8       __real@4@4006b800000000000000 004014a8     Notifi.OBJ
+ 0001:000004ac       __real@4@4005f000000000000000 004014ac     Notifi.OBJ
+ 0001:000004b0       __real@4@40058000000000000000 004014b0     Notifi.OBJ
+ 0001:000004c0       __real@4@40079380000000000000 004014c0     Notifi.OBJ
+ 0001:000004c4       __real@4@40078480000000000000 004014c4     Notifi.OBJ
+ 0001:000004c8       __real@4@4003f000000000000000 004014c8     Notifi.OBJ
+ 0001:00000578       __real@4@4006da00000000000000 00401578     Fset.OBJ
+ 0001:0000057c       __real@4@40078880000000000000 0040157c     Fset.OBJ
+ 0001:000005c8       __real@4@40008000000000000000 004015c8     Fset.OBJ
+ 0001:00000680       __real@8@4001a000000000000000 00401680     iOption.OBJ
+ 0001:000006c0       __real@4@4004f800000000000000 004016c0     iOption.OBJ
+ 0001:000006d8       __real@8@00000000000000000000 004016d8     iOption.OBJ
+ 0001:00000820       ___vbaChkstk               00401820     Cris.OBJ
+ 0001:00000820       VB@TEXT                    00401820     Cris.OBJ
+ 0001:00000826       ___vbaExceptHandler        00401826     Cris.OBJ
+ 0001:0000082c       ___vbaFPException          0040182c     Cris.OBJ
+ 0001:00000832       __adj_fdiv_m16i            00401832     Cris.OBJ
+ 0001:00000838       __adj_fdiv_m32             00401838     Cris.OBJ
+ 0001:0000083e       __adj_fdiv_m32i            0040183e     Cris.OBJ
+ 0001:00000844       __adj_fdiv_m64             00401844     Cris.OBJ
+ 0001:0000084a       __adj_fdiv_r               0040184a     Cris.OBJ
+ 0001:00000850       __adj_fdivr_m16i           00401850     Cris.OBJ
+ 0001:00000856       __adj_fdivr_m32            00401856     Cris.OBJ
+ 0001:0000085c       __adj_fdivr_m32i           0040185c     Cris.OBJ
+ 0001:00000862       __adj_fdivr_m64            00401862     Cris.OBJ
+ 0001:00000868       __adj_fpatan               00401868     Cris.OBJ
+ 0001:0000086e       __adj_fprem                0040186e     Cris.OBJ
+ 0001:00000874       __adj_fprem1               00401874     Cris.OBJ
+ 0001:0000087a       __adj_fptan                0040187a     Cris.OBJ
+ 0001:00000880       __CIatan                   00401880     Cris.OBJ
+ 0001:00000886       __CIcos                    00401886     Cris.OBJ
+ 0001:0000088c       __CIexp                    0040188c     Cris.OBJ
+ 0001:00000892       __CIlog                    00401892     Cris.OBJ
+ 0001:00000898       __CIsin                    00401898     Cris.OBJ
+ 0001:0000089e       __CIsqrt                   0040189e     Cris.OBJ
+ 0001:000008a4       __CItan                    004018a4     Cris.OBJ
+ 0001:000008aa       __allmul                   004018aa     Cris.OBJ
+ 0001:000008b6       @__vbaFpI4                 004018b6     Cris.OBJ
+ 0001:000008b6       ___vbaFpI4                 004018b6     Cris.OBJ
+ 0001:000008bc       ___vba@07D3CF48            004018bc     Cris.OBJ
+ 0001:000008bc       @__vba@07D3CF48            004018bc     Cris.OBJ
+ 0001:000008c2       ___vba@07D3CF80            004018c2     Cris.OBJ
+ 0001:000008c2       @__vba@07D3CF80            004018c2     Cris.OBJ
+ 0001:000008c8       ___vbaFreeVar              004018c8     Cris.OBJ
+ 0001:000008c8       @__vbaFreeVar              004018c8     Cris.OBJ
+ 0001:000008ce       @__vbaFreeStr              004018ce     Cris.OBJ
+ 0001:000008ce       ___vbaFreeStr              004018ce     Cris.OBJ
+ 0001:000008d4       ___vbaGenerateBoundsError  004018d4     Cris.OBJ
+ 0001:000008d4       @__vbaGenerateBoundsError  004018d4     Cris.OBJ
+ 0001:000008da       @__vbaLateIdCallLd         004018da     Cris.OBJ
+ 0001:000008da       ___vbaLateIdCallLd         004018da     Cris.OBJ
+ 0001:000008e0       ___vbaStrVarMove           004018e0     Cris.OBJ
+ 0001:000008e0       @__vbaStrVarMove           004018e0     Cris.OBJ
+ 0001:000008e6       @__vbaStrMove              004018e6     Cris.OBJ
+ 0001:000008e6       ___vbaStrMove              004018e6     Cris.OBJ
+ 0001:000008ec       ___vbaStrCopy              004018ec     Cris.OBJ
+ 0001:000008ec       @__vbaStrCopy              004018ec     Cris.OBJ
+ 0001:000008f2       ___vbaSetSystemError       004018f2     Cris.OBJ
+ 0001:000008f2       @__vbaSetSystemError       004018f2     Cris.OBJ
+ 0001:000008f8       ___vbaFpR8                 004018f8     Cris.OBJ
+ 0001:000008f8       @__vbaFpR8                 004018f8     Cris.OBJ
+ 0001:000008fe       @__vbaObjSet               004018fe     Cris.OBJ
+ 0001:000008fe       ___vbaObjSet               004018fe     Cris.OBJ
+ 0001:00000904       @__vbaEnd                  00401904     Cris.OBJ
+ 0001:00000904       ___vbaEnd                  00401904     Cris.OBJ
+ 0001:0000090a       @__vbaFreeVarList          0040190a     Cris.OBJ
+ 0001:0000090a       ___vbaFreeVarList          0040190a     Cris.OBJ
+ 0001:00000910       ___vbaVarDup               00401910     Cris.OBJ
+ 0001:00000910       @__vbaVarDup               00401910     Cris.OBJ
+ 0001:00000916       @__vba@07D3BD74            00401916     Cris.OBJ
+ 0001:00000916       ___vba@07D3BD74            00401916     Cris.OBJ
+ 0001:0000091c       ___vbaFreeObj              0040191c     Cris.OBJ
+ 0001:0000091c       @__vbaFreeObj              0040191c     Cris.OBJ
+ 0001:00000922       @__vbaHresultCheckObj      00401922     Cris.OBJ
+ 0001:00000922       ___vbaHresultCheckObj      00401922     Cris.OBJ
+ 0001:00000928       ___vbaNew2                 00401928     Cris.OBJ
+ 0001:00000928       @__vbaNew2                 00401928     Cris.OBJ
+ 0001:0000092e       @__vbaFreeObjList          0040192e     Cris.OBJ
+ 0001:0000092e       ___vbaFreeObjList          0040192e     Cris.OBJ
+ 0001:00000934       @__vbaCastObjVar           00401934     Cris.OBJ
+ 0001:00000934       ___vbaCastObjVar           00401934     Cris.OBJ
+ 0001:0000093a       @__vbaVarAdd               0040193a     Cris.OBJ
+ 0001:0000093a       ___vbaVarAdd               0040193a     Cris.OBJ
+ 0001:00000940       @__vbaLateIdSt             00401940     Cris.OBJ
+ 0001:00000940       ___vbaLateIdSt             00401940     Cris.OBJ
+ 0001:00000946       ___vbaVarDiv               00401946     Cris.OBJ
+ 0001:00000946       @__vbaVarDiv               00401946     Cris.OBJ
+ 0001:0000094c       ___vba@083C7800            0040194c     Cris.OBJ
+ 0001:0000094c       @__vba@083C7800            0040194c     Cris.OBJ
+ 0001:00000952       @__vba@083C7838            00401952     Cris.OBJ
+ 0001:00000952       ___vba@083C7838            00401952     Cris.OBJ
+ 0001:00000958       @__vbaBoolStr              00401958     Cris.OBJ
+ 0001:00000958       ___vbaBoolStr              00401958     Cris.OBJ
+ 0001:0000095e       ___vbaObjSetAddref         0040195e     Cris.OBJ
+ 0001:0000095e       @__vbaObjSetAddref         0040195e     Cris.OBJ
+ 0001:00000964       @__vbaExitProc             00401964     Cris.OBJ
+ 0001:00000964       ___vbaExitProc             00401964     Cris.OBJ
+ 0001:0000096a       @__vbaFileClose            0040196a     Cris.OBJ
+ 0001:0000096a       ___vbaFileClose            0040196a     Cris.OBJ
+ 0001:00000970       ___vbaFreeStrList          00401970     Cris.OBJ
+ 0001:00000970       @__vbaFreeStrList          00401970     Cris.OBJ
+ 0001:00000976       @__vbaLineInputStr         00401976     Cris.OBJ
+ 0001:00000976       ___vbaLineInputStr         00401976     Cris.OBJ
+ 0001:0000097c       @__vbaFileOpen             0040197c     Cris.OBJ
+ 0001:0000097c       ___vbaFileOpen             0040197c     Cris.OBJ
+ 0001:00000982       @__vba@083C7418            00401982     Cris.OBJ
+ 0001:00000982       ___vba@083C7418            00401982     Cris.OBJ
+ 0001:00000988       ___vbaStrI2                00401988     Cris.OBJ
+ 0001:00000988       @__vbaStrI2                00401988     Cris.OBJ
+ 0001:0000098e       ___vbaStrCat               0040198e     Cris.OBJ
+ 0001:0000098e       @__vbaStrCat               0040198e     Cris.OBJ
+ 0001:00000994       ___vbaVarMove              00401994     Cris.OBJ
+ 0001:00000994       @__vbaVarMove              00401994     Cris.OBJ
+ 0001:0000099a       ___vba@083C80D8            0040199a     Cris.OBJ
+ 0001:0000099a       @__vba@083C80D8            0040199a     Cris.OBJ
+ 0001:000009a0       ___vbaStrVarVal            004019a0     Cris.OBJ
+ 0001:000009a0       @__vbaStrVarVal            004019a0     Cris.OBJ
+ 0001:000009a6       @__vba@083C815C            004019a6     Cris.OBJ
+ 0001:000009a6       ___vba@083C815C            004019a6     Cris.OBJ
+ 0001:000009ac       ___vba@083C8194            004019ac     Cris.OBJ
+ 0001:000009ac       @__vba@083C8194            004019ac     Cris.OBJ
+ 0001:000009b2       @__vbaVarTstEq             004019b2     Cris.OBJ
+ 0001:000009b2       ___vbaVarTstEq             004019b2     Cris.OBJ
+ 0001:000009b8       @__vbaLenBstr              004019b8     Cris.OBJ
+ 0001:000009b8       ___vbaLenBstr              004019b8     Cris.OBJ
+ 0001:000009be       ___vbaVarCopy              004019be     Cris.OBJ
+ 0001:000009be       @__vbaVarCopy              004019be     Cris.OBJ
+ 0001:000009c4       @__vbaVarCat               004019c4     Cris.OBJ
+ 0001:000009c4       ___vbaVarCat               004019c4     Cris.OBJ
+ 0001:000009ca       @__vbaPowerR8              004019ca     Cris.OBJ
+ 0001:000009ca       ___vbaPowerR8              004019ca     Cris.OBJ
+ 0001:000009d0       ___vba@083C9CD0            004019d0     Cris.OBJ
+ 0001:000009d0       @__vba@083C9CD0            004019d0     Cris.OBJ
+ 0001:000009d6       ___vbaFpI2                 004019d6     Cris.OBJ
+ 0001:000009d6       @__vbaFpI2                 004019d6     Cris.OBJ
+ 0001:000009dc       ___vba@083C9924            004019dc     Cris.OBJ
+ 0001:000009dc       @__vba@083C9924            004019dc     Cris.OBJ
+ 0001:000009e2       ___vbaFpR4                 004019e2     Cris.OBJ
+ 0001:000009e2       @__vbaFpR4                 004019e2     Cris.OBJ
+ 0001:000009e8       @__vbaR4Var                004019e8     Cris.OBJ
+ 0001:000009e8       ___vbaR4Var                004019e8     Cris.OBJ
+ 0001:000009ee       ___vbaVarSub               004019ee     Cris.OBJ
+ 0001:000009ee       @__vbaVarSub               004019ee     Cris.OBJ
+ 0001:000009f4       ___vbaVarTstLt             004019f4     Cris.OBJ
+ 0001:000009f4       @__vbaVarTstLt             004019f4     Cris.OBJ
+ 0001:000009fa       ___vbaVarCmpLe             004019fa     Cris.OBJ
+ 0001:000009fa       @__vbaVarCmpLe             004019fa     Cris.OBJ
+ 0001:00000a00       @__vbaVarCmpLt             00401a00     Cris.OBJ
+ 0001:00000a00       ___vbaVarCmpLt             00401a00     Cris.OBJ
+ 0001:00000a06       ___vbaVarCmpGt             00401a06     Cris.OBJ
+ 0001:00000a06       @__vbaVarCmpGt             00401a06     Cris.OBJ
+ 0001:00000a0c       @__vbaVarAnd               00401a0c     Cris.OBJ
+ 0001:00000a0c       ___vbaVarAnd               00401a0c     Cris.OBJ
+ 0001:00000a12       ___vbaBoolVarNull          00401a12     Cris.OBJ
+ 0001:00000a12       @__vbaBoolVarNull          00401a12     Cris.OBJ
+ 0001:00000a18       @__vbaVarVargNofree        00401a18     Cris.OBJ
+ 0001:00000a18       ___vbaVarVargNofree        00401a18     Cris.OBJ
+ 0001:00000a1e       ___vbaI4Var                00401a1e     Cris.OBJ
+ 0001:00000a1e       @__vbaI4Var                00401a1e     Cris.OBJ
+ 0001:00000a24       @__vbaOnError              00401a24     Cris.OBJ
+ 0001:00000a24       ___vbaOnError              00401a24     Cris.OBJ
+ 0001:00000a2a       ___vbaFPInt                00401a2a     Cris.OBJ
+ 0001:00000a2a       @__vbaFPInt                00401a2a     Cris.OBJ
+ 0001:00000a30       ___vbaAryDestruct          00401a30     Cris.OBJ
+ 0001:00000a30       @__vbaAryDestruct          00401a30     Cris.OBJ
+ 0001:00000a36       @__vbaVarMul               00401a36     Cris.OBJ
+ 0001:00000a36       ___vbaVarMul               00401a36     Cris.OBJ
+ 0001:00000a3c       ___vbaVarIndexLoad         00401a3c     Cris.OBJ
+ 0001:00000a3c       @__vbaVarIndexLoad         00401a3c     Cris.OBJ
+ 0001:00000a42       ___vbaErase                00401a42     Cris.OBJ
+ 0001:00000a42       @__vbaErase                00401a42     Cris.OBJ
+ 0001:00000a48       @__vbaRedim                00401a48     Cris.OBJ
+ 0001:00000a48       ___vbaRedim                00401a48     Cris.OBJ
+ 0001:00000a4e       ___vba@083C93FC            00401a4e     Cris.OBJ
+ 0001:00000a4e       @__vba@083C93FC            00401a4e     Cris.OBJ
+ 0001:00000a54       ___vbaLenBstrB             00401a54     Cris.OBJ
+ 0001:00000a54       @__vbaLenBstrB             00401a54     Cris.OBJ
+ 0001:00000a5a       ___vba@083C94CC            00401a5a     Cris.OBJ
+ 0001:00000a5a       @__vba@083C94CC            00401a5a     Cris.OBJ
+ 0001:00000a60       ___vbaCastObj              00401a60     Cris.OBJ
+ 0001:00000a60       @__vbaCastObj              00401a60     Cris.OBJ
+ 0001:00000a66       @__vbaStrToUnicode         00401a66     Cris.OBJ
+ 0001:00000a66       ___vbaStrToUnicode         00401a66     Cris.OBJ
+ 0001:00000a6c       @__vbaStrToAnsi            00401a6c     Cris.OBJ
+ 0001:00000a6c       ___vbaStrToAnsi            00401a6c     Cris.OBJ
+ 0001:00000a72       @__vba@083C95EC            00401a72     Cris.OBJ
+ 0001:00000a72       ___vba@083C95EC            00401a72     Cris.OBJ
+ 0001:00000a78       @__vbaLenVarB              00401a78     Cris.OBJ
+ 0001:00000a78       ___vbaLenVarB              00401a78     Cris.OBJ
+ 0001:00000a7e       @__vba@083C74A4            00401a7e     Cris.OBJ
+ 0001:00000a7e       ___vba@083C74A4            00401a7e     Cris.OBJ
+ 0001:00000a84       @__vbaVarLateMemSt         00401a84     Cris.OBJ
+ 0001:00000a84       ___vbaVarLateMemSt         00401a84     Cris.OBJ
+ 0001:00000a8a       @__vbaVarLateMemCallLd     00401a8a     Cris.OBJ
+ 0001:00000a8a       ___vbaVarLateMemCallLd     00401a8a     Cris.OBJ
+ 0001:00000a90       @__vbaI2Var                00401a90     Cris.OBJ
+ 0001:00000a90       ___vbaI2Var                00401a90     Cris.OBJ
+ 0001:00000a96       @__vbaStrCmp               00401a96     Cris.OBJ
+ 0001:00000a96       ___vbaStrCmp               00401a96     Cris.OBJ
+ 0001:00000a9c       @__vba@083CB6CC            00401a9c     Cris.OBJ
+ 0001:00000a9c       ___vba@083CB6CC            00401a9c     Cris.OBJ
+ 0001:00000aa2       @__vba@083CB704            00401aa2     Cris.OBJ
+ 0001:00000aa2       ___vba@083CB704            00401aa2     Cris.OBJ
+ 0001:00000aa8       @__vbaStrI4                00401aa8     Cris.OBJ
+ 0001:00000aa8       ___vbaStrI4                00401aa8     Cris.OBJ
+ 0001:00000aae       @__vbaStrBool              00401aae     Cris.OBJ
+ 0001:00000aae       ___vbaStrBool              00401aae     Cris.OBJ
+ 0001:00000ab4       @__vbaVarTstGt             00401ab4     Cris.OBJ
+ 0001:00000ab4       ___vbaVarTstGt             00401ab4     Cris.OBJ
+ 0001:00000aba       @__vbaRaiseEvent           00401aba     Cris.OBJ
+ 0001:00000aba       ___vbaRaiseEvent           00401aba     Cris.OBJ
+ 0001:00000ac0       ___vbaPrintFile            00401ac0     Cris.OBJ
+ 0001:00000ac0       @__vbaPrintFile            00401ac0     Cris.OBJ
+ 0001:00000ac6       @__vba@083CAEEC            00401ac6     Cris.OBJ
+ 0001:00000ac6       ___vba@083CAEEC            00401ac6     Cris.OBJ
+ 0001:00000acc       ___vba@083CAF24            00401acc     Cris.OBJ
+ 0001:00000acc       @__vba@083CAF24            00401acc     Cris.OBJ
+ 0001:00000ad2       ___vba@083CAF5C            00401ad2     Cris.OBJ
+ 0001:00000ad2       @__vba@083CAF5C            00401ad2     Cris.OBJ
+ 0001:00000ad8       @__vbaLenVar               00401ad8     Cris.OBJ
+ 0001:00000ad8       ___vbaLenVar               00401ad8     Cris.OBJ
+ 0001:00000ade       ___vbaRecAssign            00401ade     Cris.OBJ
+ 0001:00000ade       @__vbaRecAssign            00401ade     Cris.OBJ
+ 0001:00000ae4       ___vba@083CE518            00401ae4     Cris.OBJ
+ 0001:00000ae4       @__vba@083CE518            00401ae4     Cris.OBJ
+ 0001:00000aea       ___vbaVarMod               00401aea     Cris.OBJ
+ 0001:00000aea       @__vbaVarMod               00401aea     Cris.OBJ
+ 0001:00000af0       ___vbaInStr                00401af0     Cris.OBJ
+ 0001:00000af0       @__vbaInStr                00401af0     Cris.OBJ
+ 0001:00000af6       ___vbaR8IntI2              00401af6     Cris.OBJ
+ 0001:00000af6       @__vbaR8IntI2              00401af6     Cris.OBJ
+ 0001:00000b14       ___vbaS                    00401b14     Cris.OBJ
+ 0001:00065d24       ___vba@07D359B4            00466d24     Cris.OBJ
+ 0001:00065d5c       ___vba@07D3651C            00466d5c     Cris.OBJ
+ 0001:00065d94       ___vba@07D35BFC            00466d94     Cris.OBJ
+ 0001:00065de4       ___vba@07D37BEC            00466de4     Cris.OBJ
+ 0001:00066344       ___vba@07D3899C            00467344     Cris.OBJ
+ 0001:00066688       ___vba@07D37E34            00467688     Cris.OBJ
+ 0001:00066a94       ___vba@07D36764            00467a94     Cris.OBJ
+ 0001:000677e8       ___vba@07D392BC            004687e8     Cris.OBJ
+ 0001:0006816c       ___vba@07D35524            0046916c     Cris.OBJ
+ 0001:00068c54       ___vba@07A94F04            00469c54     Cris.OBJ
+ 0001:00068f58       ___vba@07A94F5C            00469f58     Cris.OBJ
+ 0001:00068f5c       ___vba@07A94F64            00469f5c     Cris.OBJ
+ 0001:00068f68       ___vba@07A94F74            00469f68     Cris.OBJ
+ 0001:00068f70       ___vba@07A94F80            00469f70     Cris.OBJ
+ 0001:00068f78       ___vba@07A94F8C            00469f78     Cris.OBJ
+ 0001:00068f80       ___vba@07A94F98            00469f80     Cris.OBJ
+ 0001:00068f88       ___vba@07A94FA4            00469f88     Cris.OBJ
+ 0001:00068f90       ___vba@07A94FB0            00469f90     Cris.OBJ
+ 0001:00068f98       ___vba@07A94FBC            00469f98     Cris.OBJ
+ 0001:00068fa0       ___vba@07A94FC8            00469fa0     Cris.OBJ
+ 0001:00068fa8       ___vba@07A94FD4            00469fa8     Cris.OBJ
+ 0001:00068fb4       ___vba@07A94FE4            00469fb4     Cris.OBJ
+ 0001:00068fc4       ___vba@07A94FF8            00469fc4     Cris.OBJ
+ 0001:00068fd4       ___vba@07A9500C            00469fd4     Cris.OBJ
+ 0001:00068fe4       ___vba@07A95020            00469fe4     Cris.OBJ
+ 0001:00068ff4       ___vba@07A95034            00469ff4     Cris.OBJ
+ 0001:00069004       ___vba@07A95048            0046a004     Cris.OBJ
+ 0001:0006900c       ___vba@07A95054            0046a00c     Cris.OBJ
+ 0001:0006901c       ___vba@07A95068            0046a01c     Cris.OBJ
+ 0001:00069058       ___vba@07A950A8            0046a058     Cris.OBJ
+ 0001:0006905c       ___vba@07A950B0            0046a05c     Cris.OBJ
+ 0001:00069084       ___vba@07A950DC            0046a084     Cris.OBJ
+ 0001:00069094       ___vba@07A950F0            0046a094     Cris.OBJ
+ 0001:0006909c       ___vba@07A950FC            0046a09c     Cris.OBJ
+ 0001:000690a0       ___vba@07D3ABD4            0046a0a0     Cris.OBJ
+ 0001:000690ac       ___vba@07D3ABE4            0046a0ac     Cris.OBJ
+ 0001:000690bc       ___vba@07D3ABF8            0046a0bc     Cris.OBJ
+ 0001:000690c4       ___vba@07D3AC04            0046a0c4     Cris.OBJ
+ 0001:000690d0       ___vba@07D3AC14            0046a0d0     Cris.OBJ
+ 0001:000690dc       ___vba@07D3AC24            0046a0dc     Cris.OBJ
+ 0001:000690e8       ___vba@07D3AC34            0046a0e8     Cris.OBJ
+ 0001:000690f4       ___vba@07D3AC44            0046a0f4     Cris.OBJ
+ 0001:000690fc       ___vba@07D3AC50            0046a0fc     Cris.OBJ
+ 0001:00069104       ___vba@07D3AC5C            0046a104     Cris.OBJ
+ 0001:00069114       ___vba@07D3AC70            0046a114     Cris.OBJ
+ 0001:0006911c       ___vba@07D3AC7C            0046a11c     Cris.OBJ
+ 0001:00069128       ___vba@07D3AC8C            0046a128     Cris.OBJ
+ 0001:00069138       ___vba@07D3ACA0            0046a138     Cris.OBJ
+ 0001:00069140       ___vba@07D3ACAC            0046a140     Cris.OBJ
+ 0001:00069150       ___vba@07D3ACC0            0046a150     Cris.OBJ
+ 0001:00069158       ___vba@07D3ACCC            0046a158     Cris.OBJ
+ 0001:00069160       ___vba@07D3ACD8            0046a160     Cris.OBJ
+ 0001:00069168       ___vba@07D3ACE4            0046a168     Cris.OBJ
+ 0001:00069174       ___vba@07D3ACF4            0046a174     Cris.OBJ
+ 0001:00069184       ___vba@07D3AD08            0046a184     Cris.OBJ
+ 0001:00069194       ___vba@07D3AD1C            0046a194     Cris.OBJ
+ 0001:000691a4       ___vba@07D3AD30            0046a1a4     Cris.OBJ
+ 0001:000691b8       ___vba@07D3AD44            0046a1b8     Cris.OBJ
+ 0001:000691e4       ___vba@07D3AD74            0046a1e4     Cris.OBJ
+ 0001:00069208       ___vba@07D3AD88            0046a208     Cris.OBJ
+ 0001:00069228       ___vba@07D3ADC0            0046a228     Cris.OBJ
+ 0001:00069234       ___vba@07D3B984            0046a234     Cris.OBJ
+ 0001:00069298       ___vba@07D3B9EC            0046a298     Cris.OBJ
+ 0001:000692a4       ___vba@07D3B9FC            0046a2a4     Cris.OBJ
+ 0001:000692b0       ___vba@07D3BA0C            0046a2b0     Cris.OBJ
+ 0001:000692c0       ___vba@07D3BA20            0046a2c0     Cris.OBJ
+ 0001:000692dc       ___vba@07D3BA40            0046a2dc     Cris.OBJ
+ 0001:000692e8       ___vba@07D3BA50            0046a2e8     Cris.OBJ
+ 0001:000692f8       ___vba@07D3BA64            0046a2f8     Cris.OBJ
+ 0001:0006930c       ___vba@07D3BA78            0046a30c     Cris.OBJ
+ 0001:00069318       ___vba@07D3BA88            0046a318     Cris.OBJ
+ 0001:00069340       ___vba@07D3BAA0            0046a340     Cris.OBJ
+ 0001:00069360       ___vba@07D3BAD8            0046a360     Cris.OBJ
+ 0001:00069388       ___vba@07D3BAF0            0046a388     Cris.OBJ
+ 0001:000693a8       ___vba@07D3BB28            0046a3a8     Cris.OBJ
+ 0001:000693b8       ___vba@07D3BB3C            0046a3b8     Cris.OBJ
+ 0001:000693d0       ___vba@07D3BB58            0046a3d0     Cris.OBJ
+ 0001:000693e0       ___vba@07D3BB70            0046a3e0     Cris.OBJ
+ 0001:00069408       ___vba@07D3A744            0046a408     Cris.OBJ
+ 0001:00069428       ___vba@07D3A77C            0046a428     Cris.OBJ
+ 0001:00069450       ___vba@07D3A794            0046a450     Cris.OBJ
+ 0001:00069470       ___vba@07D3A7CC            0046a470     Cris.OBJ
+ 0001:00069480       ___vba@07D3A7E0            0046a480     Cris.OBJ
+ 0001:000694a8       ___vba@07D3A7F8            0046a4a8     Cris.OBJ
+ 0001:000694c8       ___vba@07D3A830            0046a4c8     Cris.OBJ
+ 0001:000694f0       ___vba@07D3A848            0046a4f0     Cris.OBJ
+ 0001:00069510       ___vba@07D3A880            0046a510     Cris.OBJ
+ 0001:00069524       ___vba@07D3A898            0046a524     Cris.OBJ
+ 0001:00069550       ___vba@07D3A8B4            0046a550     Cris.OBJ
+ 0001:00069570       ___vba@07D3A8EC            0046a570     Cris.OBJ
+ 0001:00069598       ___vba@07D3A904            0046a598     Cris.OBJ
+ 0001:000695b4       ___vba@07D3A93C            0046a5b4     Cris.OBJ
+ 0001:000695bc       ___vba@07D3A4FC            0046a5bc     Cris.OBJ
+ 0001:000695f0       ___vba@07D3A520            0046a5f0     Cris.OBJ
+ 0001:00069610       ___vba@07D3A558            0046a610     Cris.OBJ
+ 0001:00069638       ___vba@07D3A570            0046a638     Cris.OBJ
+ 0001:00069658       ___vba@07D3A5A8            0046a658     Cris.OBJ
+ 0001:00069664       ___vba@07D3A5B8            0046a664     Cris.OBJ
+ 0001:00069688       ___vba@07D3A5CC            0046a688     Cris.OBJ
+ 0001:000696a8       ___vba@07D3A604            0046a6a8     Cris.OBJ
+ 0001:000696cc       ___vba@07D3A618            0046a6cc     Cris.OBJ
+ 0001:000696ec       ___vba@07D3A650            0046a6ec     Cris.OBJ
+ 0001:00069710       ___vba@07D3A664            0046a710     Cris.OBJ
+ 0001:00069730       ___vba@07D3A69C            0046a730     Cris.OBJ
+ 0001:00069744       ___vba@07D3A6B4            0046a744     Cris.OBJ
+ 0001:00069758       ___vba@07D3A6D0            0046a758     Cris.OBJ
+ 0001:00069760       ___vba@07D3A6DC            0046a760     Cris.OBJ
+ 0001:00069768       ___vba@07D3A6E8            0046a768     Cris.OBJ
+ 0001:00069778       ___vba@07A56ACC            0046a778     Cris.OBJ
+ 0001:000699ac       ___vba@07D39994            0046a9ac     Cris.OBJ
+ 0001:000699cc       ___vba@07D399CC            0046a9cc     Cris.OBJ
+ 0001:000699ec       ___vba@07D399DC            0046a9ec     Cris.OBJ
+ 0001:00069a0c       ___vba@07D39A14            0046aa0c     Cris.OBJ
+ 0001:00069a30       ___vba@07D39A28            0046aa30     Cris.OBJ
+ 0001:00069a4c       ___vba@07D39A60            0046aa4c     Cris.OBJ
+ 0001:00069a60       ___vba@07D39A74            0046aa60     Cris.OBJ
+ 0001:00069a7c       ___vba@07D39A98            0046aa7c     Cris.OBJ
+ 0001:00069a8c       ___vba@07D39AAC            0046aa8c     Cris.OBJ
+ 0001:00069a9c       ___vba@07D39AC0            0046aa9c     Cris.OBJ
+ 0001:00069aac       ___vba@07D39AD4            0046aaac     Cris.OBJ
+ 0001:00069abc       ___vba@07D39AE8            0046aabc     Cris.OBJ
+ 0001:00069ac4       ___vba@07D39AF4            0046aac4     Cris.OBJ
+ 0001:00069acc       ___vba@07D39B00            0046aacc     Cris.OBJ
+ 0001:00069adc       ___vba@07D39B14            0046aadc     Cris.OBJ
+ 0001:00069ae8       ___vba@07D39B24            0046aae8     Cris.OBJ
+ 0001:00069af0       ___vba@07D39B30            0046aaf0     Cris.OBJ
+ 0001:00069af8       ___vba@07D39B3C            0046aaf8     Cris.OBJ
+ 0001:00069b04       ___vba@07D39B4C            0046ab04     Cris.OBJ
+ 0001:00069b0c       ___vba@07D39B58            0046ab0c     Cris.OBJ
+ 0001:00069b1c       ___vba@07D39B6C            0046ab1c     Cris.OBJ
+ 0001:00069b24       ___vba@07D39B78            0046ab24     Cris.OBJ
+ 0001:00069b2c       ___vba@07D39B84            0046ab2c     Cris.OBJ
+ 0001:00069b38       ___vba@07D3A98C            0046ab38     Cris.OBJ
+ 0001:00069b40       ___vba@07D3A998            0046ab40     Cris.OBJ
+ 0001:00069b48       ___vba@07D3A9A4            0046ab48     Cris.OBJ
+ 0001:00069b54       ___vba@07D3A9B0            0046ab54     Cris.OBJ
+ 0001:00069b7c       ___vba@07D3A9C8            0046ab7c     Cris.OBJ
+ 0001:00069b9c       ___vba@07D3AA00            0046ab9c     Cris.OBJ
+ 0001:00069bc4       ___vba@07D3AA18            0046abc4     Cris.OBJ
+ 0001:00069be0       ___vba@07D3AA50            0046abe0     Cris.OBJ
+ 0001:00069be8       ___vba@07D3AA5C            0046abe8     Cris.OBJ
+ 0001:00069bf8       ___vba@07D3AA70            0046abf8     Cris.OBJ
+ 0001:00069c08       ___vba@07D3AA84            0046ac08     Cris.OBJ
+ 0001:00069c18       ___vba@07D3AA98            0046ac18     Cris.OBJ
+ 0001:00069c28       ___vba@07D3AAAC            0046ac28     Cris.OBJ
+ 0001:00069c38       ___vba@07D3AAC0            0046ac38     Cris.OBJ
+ 0001:00069c44       ___vba@07D3AAD0            0046ac44     Cris.OBJ
+ 0001:00069c4c       ___vba@07D3AADC            0046ac4c     Cris.OBJ
+ 0001:00069c54       ___vba@07D3AAE8            0046ac54     Cris.OBJ
+ 0001:00069c60       ___vba@07D3AAF8            0046ac60     Cris.OBJ
+ 0001:00069c6c       ___vba@07D3AB08            0046ac6c     Cris.OBJ
+ 0001:00069c78       ___vba@07D3AB18            0046ac78     Cris.OBJ
+ 0001:00069c88       ___vba@07D3AB2C            0046ac88     Cris.OBJ
+ 0001:00069c98       ___vba@07D3AB40            0046ac98     Cris.OBJ
+ 0001:00069ca8       ___vba@07D3AB54            0046aca8     Cris.OBJ
+ 0001:00069cb8       ___vba@07D3AB68            0046acb8     Cris.OBJ
+ 0001:00069cc8       ___vba@07D3AB7C            0046acc8     Cris.OBJ
+ 0001:00069cd4       ___vba@07D3CE0C            0046acd4     Cris.OBJ
+ 0001:00069ce4       ___vba@07D3CE20            0046ace4     Cris.OBJ
+ 0001:00069d04       ___vba@07D3CE44            0046ad04     Cris.OBJ
+ 0001:00069d0c       ___vba@07D3CE50            0046ad0c     Cris.OBJ
+ 0001:00069d34       ___vba@07D3CE7C            0046ad34     Cris.OBJ
+ 0001:00069d3c       ___vba@07D3CE88            0046ad3c     Cris.OBJ
+ 0001:00069d48       ___vba@07D3CE98            0046ad48     Cris.OBJ
+ 0001:00069d54       ___vba@07D3CEA8            0046ad54     Cris.OBJ
+ 0001:00069d5c       ___vba@07D3CEB4            0046ad5c     Cris.OBJ
+ 0001:00069d6c       ___vba@07D3CEC4            0046ad6c     Cris.OBJ
+ 0001:00069d90       ___vba@07D3CEF0            0046ad90     Cris.OBJ
+ 0001:00069d9c       ___vba@07D3CF00            0046ad9c     Cris.OBJ
+ 0001:00069da8       ___vba@07D3CFB8            0046ada8     Cris.OBJ
+ 0001:00069db8       ___vba@07D3B73C            0046adb8     Cris.OBJ
+ 0001:00069dc8       ___vba@07D3B788            0046adc8     Cris.OBJ
+ 0001:00069de4       ___vba@07D3B7E0            0046ade4     Cris.OBJ
+ 0001:00069df8       ___vba@07D3B830            0046adf8     Cris.OBJ
+ 0001:00069e08       ___vba@07D3B87C            0046ae08     Cris.OBJ
+ 0001:00069e18       ___vba@07D3B8C8            0046ae18     Cris.OBJ
+ 0001:00069e28       ___vba@07D3B914            0046ae28     Cris.OBJ
+ 0001:00069e40       ___vba@07D3B92C            0046ae40     Cris.OBJ
+ 0001:00069e48       ___vba@07D3BC04            0046ae48     Cris.OBJ
+ 0001:00069e54       ___vba@07D3BC4C            0046ae54     Cris.OBJ
+ 0001:00069e60       ___vba@07D3BC94            0046ae60     Cris.OBJ
+ 0001:00069e6c       ___vba@07D3BCDC            0046ae6c     Cris.OBJ
+ 0001:00069e80       ___vba@07D3BD2C            0046ae80     Cris.OBJ
+ 0001:00069e8c       ___vba@07D3BDAC            0046ae8c     Cris.OBJ
+ 0001:00069e9c       ___vba@07D3BE4C            0046ae9c     Cris.OBJ
+ 0001:00069eb4       ___vba@07D3BEA0            0046aeb4     Cris.OBJ
+ 0001:00069ecc       ___vba@07D3BEF4            0046aecc     Cris.OBJ
+ 0001:00069f08       ___vba@07D3BF34            0046af08     Cris.OBJ
+ 0001:00069f48       ___vba@07D3BF78            0046af48     Cris.OBJ
+ 0001:00069f88       ___vba@07D3BFBC            0046af88     Cris.OBJ
+ 0001:00069fd4       ___vba@07D3C05C            0046afd4     Cris.OBJ
+ 0001:0006a020       ___vba@07D3C0AC            0046b020     Cris.OBJ
+ 0001:0006a030       ___vba@07D3C0C0            0046b030     Cris.OBJ
+ 0001:0006a03c       ___vba@07D3C0D0            0046b03c     Cris.OBJ
+ 0001:0006a044       ___vba@07D3C0DC            0046b044     Cris.OBJ
+ 0001:0006a050       ___vba@07D3C0EC            0046b050     Cris.OBJ
+ 0001:0006a05c       ___vba@07D3C0FC            0046b05c     Cris.OBJ
+ 0001:0006a064       ___vba@07D3C108            0046b064     Cris.OBJ
+ 0001:0006a070       ___vba@07D3C118            0046b070     Cris.OBJ
+ 0001:0006a090       ___vba@07D3C140            0046b090     Cris.OBJ
+ 0001:0006a0a4       ___vba@07D3C154            0046b0a4     Cris.OBJ
+ 0001:0006a0b8       ___vba@07D3C16C            0046b0b8     Cris.OBJ
+ 0001:0006a0c0       ___vba@07D3C178            0046b0c0     Cris.OBJ
+ 0001:0006a0e8       ___vba@07D3C1A4            0046b0e8     Cris.OBJ
+ 0001:0006a100       ___vba@07D3C1C0            0046b100     Cris.OBJ
+ 0001:0006a110       ___vba@07D3C1D4            0046b110     Cris.OBJ
+ 0001:0006a11c       ___vba@07D3C1E4            0046b11c     Cris.OBJ
+ 0001:0006a130       ___vba@07D3C1FC            0046b130     Cris.OBJ
+ 0001:0006a174       ___vba@07D3C248            0046b174     Cris.OBJ
+ 0001:0006a188       ___vba@083C9FFC            0046b188     Cris.OBJ
+ 0001:0006a194       ___vba@083CA010            0046b194     Cris.OBJ
+ 0001:0006a1a4       ___vba@083CA024            0046b1a4     Cris.OBJ
+ 0001:0006a1b8       ___vba@083CA038            0046b1b8     Cris.OBJ
+ 0001:0006a1c4       ___vba@083CA048            0046b1c4     Cris.OBJ
+ 0001:0006a1d8       ___vba@083CA060            0046b1d8     Cris.OBJ
+ 0001:0006a1f0       ___vba@083CA07C            0046b1f0     Cris.OBJ
+ 0001:0006a200       ___vba@083CA090            0046b200     Cris.OBJ
+ 0001:0006a20c       ___vba@083CA0A0            0046b20c     Cris.OBJ
+ 0001:0006a21c       ___vba@083CA0B4            0046b21c     Cris.OBJ
+ 0001:0006a224       ___vba@083CA0C4            0046b224     Cris.OBJ
+ 0001:0006a238       ___vba@083CA0D8            0046b238     Cris.OBJ
+ 0001:0006a24c       ___vba@083CA0F0            0046b24c     Cris.OBJ
+ 0001:0006a260       ___vba@083CA108            0046b260     Cris.OBJ
+ 0001:0006a26c       ___vba@083CA118            0046b26c     Cris.OBJ
+ 0001:0006a280       ___vba@083CA130            0046b280     Cris.OBJ
+ 0001:0006a28c       ___vba@083CA140            0046b28c     Cris.OBJ
+ 0001:0006a29c       ___vba@083CA154            0046b29c     Cris.OBJ
+ 0001:0006a2a8       ___vba@083CA164            0046b2a8     Cris.OBJ
+ 0001:0006a2c0       ___vba@083CA180            0046b2c0     Cris.OBJ
+ 0001:0006a2d8       ___vba@083CA19C            0046b2d8     Cris.OBJ
+ 0001:0006a2f0       ___vba@083CA1B8            0046b2f0     Cris.OBJ
+ 0001:0006a310       ___vba@083CA1DC            0046b310     Cris.OBJ
+ 0001:0006a31c       ___vba@083CA1EC            0046b31c     Cris.OBJ
+ 0001:0006a328       ___vba@083CB23C            0046b328     Cris.OBJ
+ 0001:0006a334       ___vba@083CB24C            0046b334     Cris.OBJ
+ 0001:0006a368       ___vba@083CB284            0046b368     Cris.OBJ
+ 0001:0006a390       ___vba@083CB2B0            0046b390     Cris.OBJ
+ 0001:0006a3c8       ___vba@083CB2EC            0046b3c8     Cris.OBJ
+ 0001:0006a400       ___vba@083CB328            0046b400     Cris.OBJ
+ 0001:0006a460       ___vba@083CB38C            0046b460     Cris.OBJ
+ 0001:0006a47c       ___vba@083CB3B0            0046b47c     Cris.OBJ
+ 0001:0006a490       ___vba@083CB400            0046b490     Cris.OBJ
+ 0001:0006a4a0       ___vba@083C7724            0046b4a0     Cris.OBJ
+ 0001:0006a4ac       ___vba@083C776C            0046b4ac     Cris.OBJ
+ 0001:0006a4bc       ___vba@083C77B8            0046b4bc     Cris.OBJ
+ 0001:0006a4c8       ___vba@083C7870            0046b4c8     Cris.OBJ
+ 0001:0006a4d8       ___vba@083C78BC            0046b4d8     Cris.OBJ
+ 0001:0006a4ec       ___vba@083C78D4            0046b4ec     Cris.OBJ
+ 0001:0006a4f8       ___vba@083C7294            0046b4f8     Cris.OBJ
+ 0001:0006a508       ___vba@083C72E0            0046b508     Cris.OBJ
+ 0001:0006a518       ___vba@083C732C            0046b518     Cris.OBJ
+ 0001:0006a52c       ___vba@083C737C            0046b52c     Cris.OBJ
+ 0001:0006a540       ___vba@083C73CC            0046b540     Cris.OBJ
+ 0001:0006a550       ___vba@083C8044            0046b550     Cris.OBJ
+ 0001:0006a55c       ___vba@083C808C            0046b55c     Cris.OBJ
+ 0001:0006a56c       ___vba@083C8110            0046b56c     Cris.OBJ
+ 0001:0006a57c       ___vba@083C81CC            0046b57c     Cris.OBJ
+ 0001:0006a58c       ___vba@083C81E0            0046b58c     Cris.OBJ
+ 0001:0006a59c       ___vba@083C81F4            0046b59c     Cris.OBJ
+ 0001:0006a5a8       ___vba@083C9BA4            0046b5a8     Cris.OBJ
+ 0001:0006a5b8       ___vba@083C9BF0            0046b5b8     Cris.OBJ
+ 0001:0006a5c8       ___vba@083C9C3C            0046b5c8     Cris.OBJ
+ 0001:0006a5d4       ___vba@083C9C84            0046b5d4     Cris.OBJ
+ 0001:0006a5e4       ___vba@083C9D08            0046b5e4     Cris.OBJ
+ 0001:0006a5f0       ___vba@083C9D50            0046b5f0     Cris.OBJ
+ 0001:0006a600       ___vba@083C995C            0046b600     Cris.OBJ
+ 0001:0006a60c       ___vba@083C99A4            0046b60c     Cris.OBJ
+ 0001:0006a618       ___vba@083C99EC            0046b618     Cris.OBJ
+ 0001:0006a624       ___vba@083C9A34            0046b624     Cris.OBJ
+ 0001:0006a634       ___vba@083C9A80            0046b634     Cris.OBJ
+ 0001:0006a644       ___vba@083C9ACC            0046b644     Cris.OBJ
+ 0001:0006a654       ___vba@083CA27C            0046b654     Cris.OBJ
+ 0001:0006a660       ___vba@083CA2C4            0046b660     Cris.OBJ
+ 0001:0006a674       ___vba@083CA314            0046b674     Cris.OBJ
+ 0001:0006a688       ___vba@083CA364            0046b688     Cris.OBJ
+ 0001:0006a694       ___vba@083CA3AC            0046b694     Cris.OBJ
+ 0001:0006a6a4       ___vba@083CA3F8            0046b6a4     Cris.OBJ
+ 0001:0006a6b8       ___vba@083CA410            0046b6b8     Cris.OBJ
+ 0001:0006a6cc       ___vba@083CA428            0046b6cc     Cris.OBJ
+ 0001:0006a6d4       ___vba@083C9284            0046b6d4     Cris.OBJ
+ 0001:0006a6e8       ___vba@083C92D4            0046b6e8     Cris.OBJ
+ 0001:0006a6f4       ___vba@083C931C            0046b6f4     Cris.OBJ
+ 0001:0006a708       ___vba@083C936C            0046b708     Cris.OBJ
+ 0001:0006a714       ___vba@083C93B4            0046b714     Cris.OBJ
+ 0001:0006a720       ___vba@083C9434            0046b720     Cris.OBJ
+ 0001:0006a734       ___vba@083C9504            0046b734     Cris.OBJ
+ 0001:0006a744       ___vba@083C9550            0046b744     Cris.OBJ
+ 0001:0006a758       ___vba@083C95A0            0046b758     Cris.OBJ
+ 0001:0006a768       ___vba@083C9624            0046b768     Cris.OBJ
+ 0001:0006a778       ___vba@083C9670            0046b778     Cris.OBJ
+ 0001:0006a788       ___vba@083C74DC            0046b788     Cris.OBJ
+ 0001:0006a79c       ___vba@083C752C            0046b79c     Cris.OBJ
+ 0001:0006a7b4       ___vba@083C7580            0046b7b4     Cris.OBJ
+ 0001:0006a7c0       ___vba@083C75C8            0046b7c0     Cris.OBJ
+ 0001:0006a7d0       ___vba@083C7610            0046b7d0     Cris.OBJ
+ 0001:0006a7dc       ___vba@083C7620            0046b7dc     Cris.OBJ
+ 0001:0006a7ec       ___vba@083C7634            0046b7ec     Cris.OBJ
+ 0001:0006a7f4       ___vba@083C7640            0046b7f4     Cris.OBJ
+ 0001:0006a808       ___vba@083C7658            0046b808     Cris.OBJ
+ 0001:0006a814       ___vba@083C7668            0046b814     Cris.OBJ
+ 0001:0006a820       ___vba@083C7678            0046b820     Cris.OBJ
+ 0001:0006a828       ___vba@083C7688            0046b828     Cris.OBJ
+ 0001:0006a838       ___vba@083C769C            0046b838     Cris.OBJ
+ 0001:0006a83c       ___vba@083CB73C            0046b83c     Cris.OBJ
+ 0001:0006a848       ___vba@083CB784            0046b848     Cris.OBJ
+ 0001:0006a858       ___vba@083CB7D0            0046b858     Cris.OBJ
+ 0001:0006a868       ___vba@083CB7E4            0046b868     Cris.OBJ
+ 0001:0006a878       ___vba@083CB7F8            0046b878     Cris.OBJ
+ 0001:0006a888       ___vba@083CB80C            0046b888     Cris.OBJ
+ 0001:0006a898       ___vba@083CB820            0046b898     Cris.OBJ
+ 0001:0006a8a8       ___vba@083CB834            0046b8a8     Cris.OBJ
+ 0001:0006a8b8       ___vba@083CB848            0046b8b8     Cris.OBJ
+ 0001:0006a8c4       ___vba@083CB858            0046b8c4     Cris.OBJ
+ 0001:0006a8cc       ___vba@083CB864            0046b8cc     Cris.OBJ
+ 0001:0006a8d4       ___vba@083CB870            0046b8d4     Cris.OBJ
+ 0001:0006a8e0       ___vba@083CB880            0046b8e0     Cris.OBJ
+ 0001:0006a8f8       ___vba@083CB89C            0046b8f8     Cris.OBJ
+ 0001:0006a908       ___vba@083CADE4            0046b908     Cris.OBJ
+ 0001:0006a91c       ___vba@083CAE30            0046b91c     Cris.OBJ
+ 0001:0006a924       ___vba@083CAE3C            0046b924     Cris.OBJ
+ 0001:0006a930       ___vba@083CAE4C            0046b930     Cris.OBJ
+ 0001:0006a954       ___vba@083CAE74            0046b954     Cris.OBJ
+ 0001:0006a964       ___vba@083CAE88            0046b964     Cris.OBJ
+ 0001:0006a96c       ___vba@083CAE94            0046b96c     Cris.OBJ
+ 0001:0006a970       ___vba@083CAEA0            0046b970     Cris.OBJ
+ 0001:0006a980       ___vba@083CAF94            0046b980     Cris.OBJ
+ 0001:0006a98c       ___vba@083CE4A4            0046b98c     Cris.OBJ
+ 0001:0006a9a0       ___vba@083CE4F0            0046b9a0     Cris.OBJ
+ 0001:0006a9c0       ___vba@083CE550            0046b9c0     Cris.OBJ
+ 0001:0006a9d0       ___vba@083CE598            0046b9d0     Cris.OBJ
+ 0001:0006a9e4       ___vba@083CE5B0            0046b9e4     Cris.OBJ
+ 0001:0006a9f4       ___vba@083CE5C4            0046b9f4     Cris.OBJ
+ 0001:0006aa00       ___vba@083CE5D4            0046ba00     Cris.OBJ
+ 0001:0006aa0c       ___vba@083CE5E4            0046ba0c     Cris.OBJ
+ 0001:0006aa18       ___vba@083CE5F4            0046ba18     Cris.OBJ
+ 0001:0006aa1c       ___vba@083CE600            0046ba1c     Cris.OBJ
+ 0001:0006aa28       ___vba@083CE648            0046ba28     Cris.OBJ
+ 0001:000867f8       ___vba@07D3608C            004877f8     Cris.OBJ
+ 0001:00086838       ___vba@07D38E2C            00487838     Cris.OBJ
+ 0001:00086878       ___vba@07D362D4            00487878     Cris.OBJ
+ 0001:000868b8       ___vba@07D3850C            004878b8     Cris.OBJ
+ 0001:000868f8       ___vba@07D3576C            004878f8     Cris.OBJ
+ 0001:00086a0c       ___vba@07A945E4            00487a0c     Cris.OBJ
+ 0001:00086a34       ___vba@07A94610            00487a34     Cris.OBJ
+ 0001:00086a40       ___vba@07A94620            00487a40     Cris.OBJ
+ 0001:00086a4c       ___vba@07A94630            00487a4c     Cris.OBJ
+ 0001:00086a58       ___vba@07A94640            00487a58     Cris.OBJ
+ 0001:00086a64       ___vba@07A94650            00487a64     Cris.OBJ
+ 0001:00086a70       ___vba@07A94660            00487a70     Cris.OBJ
+ 0001:00086a7c       ___vba@07A94670            00487a7c     Cris.OBJ
+ 0001:00086a88       ___vba@07A94680            00487a88     Cris.OBJ
+ 0001:00086a94       ___vba@07A94690            00487a94     Cris.OBJ
+ 0001:00086aa0       ___vba@07A946A0            00487aa0     Cris.OBJ
+ 0001:00086aa4       ___vba@07A946A8            00487aa4     Cris.OBJ
+ 0001:00086aac       ___vba@07A946B4            00487aac     Cris.OBJ
+ 0001:00086ab0       ___vba@07A946BC            00487ab0     Cris.OBJ
+ 0001:00086abc       ___vba@07A946CC            00487abc     Cris.OBJ
+ 0001:00086ac8       ___vba@07A946DC            00487ac8     Cris.OBJ
+ 0001:00086ad0       VB@BTXT                    00487ad0     Cris.OBJ
+ 0001:00086ae0       ?Form_Load@Noti@@AAGXXZ    00487ae0 f   Noti.OBJ
+ 0001:00086c90       ?EXIT_@Noti@@AAGXXZ        00487c90 f   Noti.OBJ
+ 0001:00086e30       ?Form_KeyDown@Noti@@AAGXXZ 00487e30 f   Noti.OBJ
+ 0001:00086ec0       ?Form_MouseDown@Noti@@AAGXXZ 00487ec0 f   Noti.OBJ
+ 0001:00087230       ?Form_MouseUp@Noti@@AAGXXZ 00488230 f   Noti.OBJ
+ 0001:000872a0       ?TimerX_Timer@Noti@@AAGXXZ 004882a0 f   Noti.OBJ
+ 0001:00087950       ?CreateTransparentWindowStyle@Mbas@@AAGXXZ 00488950 f   Mbas.OBJ
+ 0001:00087a30       ?WindowTransparency@Mbas@@AAGXXZ 00488a30 f   Mbas.OBJ
+ 0001:00087b20       ?Error_@Mbas@@AAGXXZ       00488b20 f   Mbas.OBJ
+ 0001:00087d90       ?ShowEffect@Mbas@@AAGXXZ   00488d90 f   Mbas.OBJ
+ 0001:00088cc0       ?RandomColor@Mbas@@AAGXXZ  00489cc0 f   Mbas.OBJ
+ 0001:00088ff0       ?TimerCal@Mbas@@AAGXXZ     00489ff0 f   Mbas.OBJ
+ 0001:000893c0       ?Hook@Mbas@@AAGXXZ         0048a3c0 f   Mbas.OBJ
+ 0001:000893f0       ?UnHook@Mbas@@AAGXXZ       0048a3f0 f   Mbas.OBJ
+ 0001:00089410       ?WindowProc@Mbas@@AAGXXZ   0048a410 f   Mbas.OBJ
+ 0001:000894b0       ?GetFile@Mbas@@AAGXXZ      0048a4b0 f   Mbas.OBJ
+ 0001:000896e0       ?InputFile@Mbas@@AAGXXZ    0048a6e0 f   Mbas.OBJ
+ 0001:00089b10       ?StartSet@Mbas@@AAGXXZ     0048ab10 f   Mbas.OBJ
+ 0001:0008bf00       ?TextPrint@bBas@@AAGXXZ    0048cf00 f   Bbas.OBJ
+ 0001:0008c130       ?MainBlt@bBas@@AAGXXZ      0048d130 f   Bbas.OBJ
+ 0001:0008d130       ?RayBlt@bBas@@AAGXXZ       0048e130 f   Bbas.OBJ
+ 0001:0008d8a0       ?SearchBlt@bBas@@AAGXXZ    0048e8a0 f   Bbas.OBJ
+ 0001:0008dad0       ?NoteBlt@bBas@@AAGXXZ      0048ead0 f   Bbas.OBJ
+ 0001:0008e420       ?Messageblt@bBas@@AAGXXZ   0048f420 f   Bbas.OBJ
+ 0001:0008e700       ?MessageBoxBlt@bBas@@AAGXXZ 0048f700 f   Bbas.OBJ
+ 0001:000913c0       ?NotifiBlt@bBas@@AAGXXZ    004923c0 f   Bbas.OBJ
+ 0001:000919b0       ?GradationText@bBas@@AAGXXZ 004929b0 f   Bbas.OBJ
+ 0001:00091cd0       ?GradationLine@bBas@@AAGXXZ 00492cd0 f   Bbas.OBJ
+ 0001:00091fd0       ?GradationMenu@bBas@@AAGXXZ 00492fd0 f   Bbas.OBJ
+ 0001:000923a0       ?GetRGB@bBas@@AAGXXZ       004933a0 f   Bbas.OBJ
+ 0001:000923f0       ?ButtonSpace_MouseDown@Notifi@@AAGXXZ 004933f0 f   Notifi.OBJ
+ 0001:00092540       ?Form_MouseDown@Notifi@@AAGXXZ 00493540 f   Notifi.OBJ
+ 0001:000926a0       ?RaySpace_MouseDown@Notifi@@AAGXXZ 004936a0 f   Notifi.OBJ
+ 0001:000927b0       ?TTitle_KeyDown@Notifi@@AAGXXZ 004937b0 f   Notifi.OBJ
+ 0001:00092840       ?Tbox_KeyDown@Notifi@@AAGXXZ 00493840 f   Notifi.OBJ
+ 0001:000928d0       ?TTitle_KeyUp@Notifi@@AAGXXZ 004938d0 f   Notifi.OBJ
+ 0001:00092970       ?Tbox_KeyUp@Notifi@@AAGXXZ 00493970 f   Notifi.OBJ
+ 0001:00092a10       ?TTitle_Change@Notifi@@AAGXXZ 00493a10 f   Notifi.OBJ
+ 0001:00092b30       ?TTitle_GotFocus@Notifi@@AAGXXZ 00493b30 f   Notifi.OBJ
+ 0001:00092d90       ?Tbox_GotFocus@Notifi@@AAGXXZ 00493d90 f   Notifi.OBJ
+ 0001:00092ff0       ?SBox_GotFocus@Notifi@@AAGXXZ 00493ff0 f   Notifi.OBJ
+ 0001:00093250       ?TTitle_MouseMove@Notifi@@AAGXXZ 00494250 f   Notifi.OBJ
+ 0001:000932d0       ?Tbox_MouseMove@Notifi@@AAGXXZ 004942d0 f   Notifi.OBJ
+ 0001:00093350       ?RaySpace_MouseMove@Notifi@@AAGXXZ 00494350 f   Notifi.OBJ
+ 0001:000933d0       ?Form_MouseMove@Notifi@@AAGXXZ 004943d0 f   Notifi.OBJ
+ 0001:00093450       ?ButtonSpace_MouseMove@Notifi@@AAGXXZ 00494450 f   Notifi.OBJ
+ 0001:000934d0       ?Tbox_MouseUp@Notifi@@AAGXXZ 004944d0 f   Notifi.OBJ
+ 0001:00093680       ?Bar_MouseDown@Fset@@AAGXXZ 00494680 f   Fset.OBJ
+ 0001:000937a0       ?Form_Load@Fset@@AAGXXZ    004947a0 f   Fset.OBJ
+ 0001:00093960       ?SetForm@Fset@@AAGXXZ      00494960 f   Fset.OBJ
+ 0001:00093e90       ?TabEffect@Fset@@AAGXXZ    00494e90 f   Fset.OBJ
+ 0001:000942c0       ?Save_Me@Fset@@AAGXXZ      004952c0 f   Fset.OBJ
+ 0001:00094670       ?MatchTexts@Fset@@AAGXXZ   00495670 f   Fset.OBJ
+ 0001:00094980       ?DMatchTexts@Fset@@AAGXXZ  00495980 f   Fset.OBJ
+ 0001:00094b00       ?InputText_KeyDown@Fset@@AAGXXZ 00495b00 f   Fset.OBJ
+ 0001:00094bb0       ?Nuser_ValueChange@Fset@@AAGXXZ 00495bb0 f   Fset.OBJ
+ 0001:00095020       ?PT_All_Click@Fset@@AAGXXZ 00496020 f   Fset.OBJ
+ 0001:00095200       ?PT_Copy_Click@Fset@@AAGXXZ 00496200 f   Fset.OBJ
+ 0001:00095640       ?PT_Cut_Click@Fset@@AAGXXZ 00496640 f   Fset.OBJ
+ 0001:00095dd0       ?PT_Delete_Click@Fset@@AAGXXZ 00496dd0 f   Fset.OBJ
+ 0001:00096200       ?PT_Paste_Click@Fset@@AAGXXZ 00497200 f   Fset.OBJ
+ 0001:00096690       ?TimeOp_ValueChange@Fset@@AAGXXZ 00497690 f   Fset.OBJ
+ 0001:000967d0       ?TimeSp_ValueChange@Fset@@AAGXXZ 004977d0 f   Fset.OBJ
+ 0001:00096910       ?TimerX_Timer@iOption@@AAGXXZ 00497910 f   iOption.OBJ
+ 0001:00096ab0       ?UserControl_Click@iOption@@AAGXXZ 00497ab0 f   iOption.OBJ
+ 0001:00096b60       ?UserControl_Initialize@iOption@@AAGXXZ 00497b60 f   iOption.OBJ
+ 0001:00096c80       ?UserControl_MouseDown@iOption@@AAGXXZ 00497c80 f   iOption.OBJ
+ 0001:00096d70       ?UserControl_MouseMove@iOption@@AAGXXZ 00497d70 f   iOption.OBJ
+ 0001:00096ef0       ?UserControl_MouseUp@iOption@@AAGXXZ 00497ef0 f   iOption.OBJ
+ 0001:000970a0       ?Tx_Value@iOption@@AAGXXZ  004980a0 f   iOption.OBJ
+ 0001:00097140       ?DrawOption@iOption@@AAGXXZ 00498140 f   iOption.OBJ
+ 0001:00097610       ?UserControl_Resize@iOption@@AAGXXZ 00498610 f   iOption.OBJ
+ 0001:00097680       ?UserControl_Show@iOption@@AAGXXZ 00498680 f   iOption.OBJ
+ 0001:000976f0       ?Value__Get@iOption@@AAGXXZ 004986f0 f   iOption.OBJ
+ 0001:000977b0       ?Value__Let@iOption@@AAGXXZ 004987b0 f   iOption.OBJ
+ 0001:00097880       ?LoadMemo@Fbas@@AAGXXZ     00498880 f   Fbas.OBJ
+ 0001:000979e0       ?PushTextArray@Fbas@@AAGXXZ 004989e0 f   Fbas.OBJ
+ 0001:00097a50       ?PushMessageArray@Fbas@@AAGXXZ 00498a50 f   Fbas.OBJ
+ 0001:00097ac0       ?GetStringLen@Fbas@@AAGXXZ 00498ac0 f   Fbas.OBJ
+ 0001:00097d50       ?GetStringHeight@Fbas@@AAGXXZ 00498d50 f   Fbas.OBJ
+ 0001:00097e40       ?StringCut@Fbas@@AAGXXZ    00498e40 f   Fbas.OBJ
+ 0001:00097fd0       ?TrueV@Fbas@@AAGXXZ        00498fd0 f   Fbas.OBJ
+ 0001:00098090       ?PixV@Fbas@@AAGXXZ         00499090 f   Fbas.OBJ
+ 0001:000981c0       ?TwiV@Fbas@@AAGXXZ         004991c0 f   Fbas.OBJ
+ 0001:000982f0       ?SaveLog@Fbas@@AAGXXZ      004992f0 f   Fbas.OBJ
+ 0001:00098300       ?SaveMemo@Fbas@@AAGXXZ     00499300 f   Fbas.OBJ
+ 0001:000984f0       ?AddL_Click@fTalk@@AAGXXZ  004994f0 f   fTalk.OBJ
+ 0001:00098590       ?Form_Load@fTalk@@AAGXXZ   00499590 f   fTalk.OBJ
+ 0001:00098740       ?MessageTalk@fTalk@@AAGXXZ 00499740 f   fTalk.OBJ
+ 0001:00098db0       ?Form_Unload@fTalk@@AAGXXZ 00499db0 f   fTalk.OBJ
+ 0001:00098e40       ?UserText_KeyDown@fTalk@@AAGXXZ 00499e40 f   fTalk.OBJ
+ 0001:00099110       ?CrisAI_Input@CrisAIBas@@AAGXXZ 0049a110 f   CrisAIBas.OBJ
+ 0001:000993e0       ?CrisAI_Output@CrisAIBas@@AAGXXZ 0049a3e0 f   CrisAIBas.OBJ
+ 0001:000994c0       VB@ETXT                    0049a4c0     Cris.OBJ
+ 0002:00000000       __adjust_fdiv              0049b000     VBAEXE6:natsupp.obj
+ 0002:00000008       VB@BSS                     0049b008     Cris.OBJ
+ 0002:00000010       ___vba@07A94848            0049b010     Cris.OBJ
+ 0002:00000024       _CrisAIBas                 0049b024     Cris.OBJ
+ 0002:00000034       _Mbas                      0049b034     Cris.OBJ
+ 0002:00000288       _bBas                      0049b288     Cris.OBJ
+ 0002:00000298       ___vba@07A94890            0049b298     Cris.OBJ
+ 0002:000002ac       ___vba@07A948A8            0049b2ac     Cris.OBJ
+ 0002:000002c0       ___vba@07A94860            0049b2c0     Cris.OBJ
+ 0002:000002d4       _Fbas                      0049b2d4     Cris.OBJ
+ 0002:000002e4       ___vba@07A94878            0049b2e4     Cris.OBJ
+ 0002:00000930       ___vba@07D3BEE8            0049b930     Cris.OBJ
+ 0002:0000096c       ___vba@08437B54            0049b96c     Cris.OBJ
+ 0002:00001084       ___vba@07B9270C            0049c084     Cris.OBJ
+ 0002:000017c8       ___vba@0852A31C            0049c7c8     Cris.OBJ
+ 0002:00001fa8       ___vba@08435174            0049cfa8     Cris.OBJ
+ 0002:000026f0       ___vba@07CAB99C            0049d6f0     Cris.OBJ
+
+ entry point at        0001:00000b14
+
+ Static symbols
+

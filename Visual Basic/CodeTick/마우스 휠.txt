@@ -1,0 +1,42 @@
+Attribute VB_Name = "WheelMouse"
+Option Explicit
+Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" (ByVal hwnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
+Declare Function CallWindowProc Lib "user32" Alias "CallWindowProcA" (ByVal lpPrevWndFunc As Long, ByVal hwnd As Long, ByVal Msg As Long, ByVal wParam As Long, ByVal lParam As Long) As Long
+Public Const GWL_WNDPROC = (-4)
+Public Const WM_MOUSEWHEEL = &H20A
+Public gHW As Long
+Dim PrevProc As Long
+Public WScroll As Boolean
+Public Sub Hook(hwnd As Long)
+  
+  gHW = hwnd
+  PrevProc = SetWindowLong(hwnd, GWL_WNDPROC, AddressOf WindowProc)
+      
+End Sub
+Public Sub UnHook()
+  
+  SetWindowLong gHW, GWL_WNDPROC, PrevProc
+  
+End Sub
+Public Function WindowProc(ByVal hwnd As Long, ByVal uMsg As Long, ByVal wParam As Long, ByVal lParam As Long) As Long
+  
+    WindowProc = CallWindowProc(PrevProc, hwnd, uMsg, wParam, lParam)
+  
+    If uMsg = WM_MOUSEWHEEL Then
+        If wParam < 0 Then
+          ' =====// ÈÙ ¸¶¿ì½º Down //=====
+            If WScroll = True Then
+                If Mapview.VScroll1.Value < 196 Then Mapview.VScroll1.Value = Mapview.VScroll1.Value + 2
+            Else
+                If Mapview.HScroll1.Value < 240 Then Mapview.HScroll1.Value = Mapview.HScroll1.Value + 1
+            End If
+        Else
+          ' ====// ÈÙ ¸¶¿ì½º Up //====
+            If WScroll = True Then
+                If Mapview.VScroll1.Value > 0 Then Mapview.VScroll1.Value = Mapview.VScroll1.Value - 2
+            Else
+                If Mapview.HScroll1.Value > 0 Then Mapview.HScroll1.Value = Mapview.HScroll1.Value - 1
+            End If
+        End If
+  End If
+End Function

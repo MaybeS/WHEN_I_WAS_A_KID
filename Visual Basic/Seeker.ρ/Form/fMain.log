@@ -1,0 +1,45 @@
+22 행: CList 컨트롤의 MSComctlLib.ImageList 클래스는 로드한 컨트롤 클래스가 아닙니다.
+162 행: LogoBox 컨트롤의 MSComctlLib.ImageList 클래스는 로드한 컨트롤 클래스가 아닙니다.
+192 행: Elist 컨트롤의 MSComctlLib.ImageList 클래스는 로드한 컨트롤 클래스가 아닙니다.
+25 행: CList의 _ExtentX 속성 이름이 잘못되었습니다. 
+26 행: CList의 _ExtentY 속성 이름이 잘못되었습니다. 
+28 행: CList의 ImageWidth 속성 이름이 잘못되었습니다. 
+29 행: CList의 ImageHeight 속성 이름이 잘못되었습니다. 
+30 행: CList의 MaskColor 속성 이름이 잘못되었습니다. 
+31 행: CList의 _Version 속성 이름이 잘못되었습니다. 
+42 행: CList의 Images 속성 이름이 잘못되었습니다. 
+165 행: LogoBox의 _ExtentX 속성 이름이 잘못되었습니다. 
+166 행: LogoBox의 _ExtentY 속성 이름이 잘못되었습니다. 
+168 행: LogoBox의 ImageWidth 속성 이름이 잘못되었습니다. 
+169 행: LogoBox의 ImageHeight 속성 이름이 잘못되었습니다. 
+170 행: LogoBox의 MaskColor 속성 이름이 잘못되었습니다. 
+171 행: LogoBox의 _Version 속성 이름이 잘못되었습니다. 
+190 행: LogoBox의 Images 속성 이름이 잘못되었습니다. 
+195 행: Elist의 _ExtentX 속성 이름이 잘못되었습니다. 
+196 행: Elist의 _ExtentY 속성 이름이 잘못되었습니다. 
+198 행: Elist의 ImageWidth 속성 이름이 잘못되었습니다. 
+199 행: Elist의 ImageHeight 속성 이름이 잘못되었습니다. 
+200 행: Elist의 MaskColor 속성 이름이 잘못되었습니다. 
+201 행: Elist의 _Version 속성 이름이 잘못되었습니다. 
+212 행: Elist의 Images 속성 이름이 잘못되었습니다. 
+25 행: CList의 _ExtentX 속성 이름이 잘못되었습니다. 
+26 행: CList의 _ExtentY 속성 이름이 잘못되었습니다. 
+28 행: CList의 ImageWidth 속성 이름이 잘못되었습니다. 
+29 행: CList의 ImageHeight 속성 이름이 잘못되었습니다. 
+30 행: CList의 MaskColor 속성 이름이 잘못되었습니다. 
+31 행: CList의 _Version 속성 이름이 잘못되었습니다. 
+42 행: CList의 Images 속성 이름이 잘못되었습니다. 
+165 행: LogoBox의 _ExtentX 속성 이름이 잘못되었습니다. 
+166 행: LogoBox의 _ExtentY 속성 이름이 잘못되었습니다. 
+168 행: LogoBox의 ImageWidth 속성 이름이 잘못되었습니다. 
+169 행: LogoBox의 ImageHeight 속성 이름이 잘못되었습니다. 
+170 행: LogoBox의 MaskColor 속성 이름이 잘못되었습니다. 
+171 행: LogoBox의 _Version 속성 이름이 잘못되었습니다. 
+190 행: LogoBox의 Images 속성 이름이 잘못되었습니다. 
+195 행: Elist의 _ExtentX 속성 이름이 잘못되었습니다. 
+196 행: Elist의 _ExtentY 속성 이름이 잘못되었습니다. 
+198 행: Elist의 ImageWidth 속성 이름이 잘못되었습니다. 
+199 행: Elist의 ImageHeight 속성 이름이 잘못되었습니다. 
+200 행: Elist의 MaskColor 속성 이름이 잘못되었습니다. 
+201 행: Elist의 _Version 속성 이름이 잘못되었습니다. 
+212 행: Elist의 Images 속성 이름이 잘못되었습니다. 

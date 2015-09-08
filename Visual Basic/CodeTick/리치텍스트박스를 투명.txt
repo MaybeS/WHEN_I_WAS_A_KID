@@ -1,0 +1,14 @@
+Private Declare Function SetWindowLong Lib "user32" Alias "SetWindowLongA" (ByVal hwnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
+
+Private Sub Timer1_Timer()
+Timer1.Enabled = False
+
+Dim result As Long
+
+result = SetWindowLong(txtGameChatroom.hwnd, GWL_EXSTYLE, WS_EX_TRANSPARENT)
+
+txtGameChatroom.Visible = True
+txtGameChatroom.SelColor = &HC0FFFF
+txtGameChatroom.SelText = txtGameChatroom.SelText & "test" & (msgNum - serversLastMessage) - numOfMessages & " Packet(s)!*" & vbCrLf
+      
+End Sub

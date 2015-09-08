@@ -1,0 +1,48 @@
+Option Explicit
+Private Declare Function CombineRgn Lib "gdi32" (ByVal hDestRgn As Long, ByVal hSrcRgn1 As Long, ByVal hSrcRgn2 As Long, ByVal nCombineMode As Long) As Long
+Private Declare Function CreateEllipticRgn Lib "gdi32" (ByVal X1 As Long, ByVal Y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
+Private Declare Function SetWindowRgn Lib "user32" (ByVal hwnd As Long, ByVal hRgn As Long, ByVal bRedraw As Boolean) As Long
+Private Declare Function DeleteObject Lib "gdi32" (ByVal hObject As Long) As Long
+Private Const RGN_DIFF = 4
+Private Sub Form_Load()
+    Dim OutSide As Long ' 외부 영역
+    Dim InSide As Long ' 내부 영역
+    Dim Desc As Long ' 조합 결과 영역
+    
+    With Form1
+        .ScaleMode = vbPixels
+        OutSide = CreateEllipticRgn(0, 0, .ScaleWidth, .ScaleHeight) ' 영역 생성
+        InSide = CreateEllipticRgn(0 + 20, 0 + 20, .ScaleWidth - 20, .ScaleHeight - 20)
+        Desc = CreateEllipticRgn(0, 0, .ScaleWidth, .ScaleHeight)
+        Call CombineRgn(Desc, OutSide, InSide, RGN_DIFF) ' 영역 조합
+        DeleteObject OutSide ' 영역 삭제
+        DeleteObject InSide
+        Call SetWindowRgn(.hwnd, Desc, True) ' 영역 윈도우에 할당
+    End With
+End Sub
+
+
+-----------------------------------------------------------------------
+
+Public Declare Function CombineRgn Lib "gdi32" (ByVal hDestRgn As Long, ByVal hSrcRgn1 As Long, ByVal hSrcRgn2 As Long, ByVal nCombineMode As Long) As Long
+Public Declare Function CreateEllipticRgn Lib "gdi32" (ByVal X1 As Long, ByVal Y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
+Public Declare Function CreateEllipticRgnIndirect Lib "gdi32" (lpRect As RECT) As Long
+Public Declare Function CreateRectRgn Lib "gdi32" (ByVal X1 As Long, ByVal Y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
+Public Declare Function CreateRectRgnIndirect Lib "gdi32" (lpRect As RECT) As Long
+Public Declare Function CreateRoundRectRgn Lib "gdi32" (ByVal X1 As Long, ByVal Y1 As Long, ByVal X2 As Long, ByVal Y2 As Long, ByVal X3 As Long, ByVal Y3 As Long) As Long
+
+-----------------------------------------------------
+Private Declare Function CreateEllipticRgn Lib "gdi32" (ByVal X1 As Long, ByVal Y1 As Long, ByVal X2 As Long, ByVal Y2 As Long) As Long
+Private Declare Function SetWindowRgn Lib "user32" (ByVal hWnd As Long, ByVal hRgn As Long, ByVal bRedraw As Boolean) As Long
+
+    Dim CircleH As Long ' 원형 영역
+    
+    CircleH = CreateEllipticRgn(0, 0, 103, 102) ' 원 영역 생성
+    SetWindowRgn Text1.hWnd, CircleH, True ' 원을 폼에 적용
+---------------------------------------------------------
+상수	값	설명
+RGN_AND	1	두 영역의 공통부분만 합침
+RGN_COPY	5	첫번째 영역(hSrcRgn1)을 복사
+RGN_DIFF	4	첫번째 영역(hrgnSrc1)에서 두번째 영역을 제외한 부분만 합침
+RGN_OR	2	두 영역을 합침
+RGN_XOR	3	두 영역을 공통 부분을 제외한 부분을 뺀 부분만 합침

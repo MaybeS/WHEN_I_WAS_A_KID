@@ -1,0 +1,258 @@
+Blt관련 API에 필요한 상수 & 구조체
+
+ 
+
+1) BitBlt, StretchBlt, MaskBlt
+
+Const BLACKNESS As Long = &H42
+Const DSTINVERT As Long = &H550009
+Const MERGECOPY As Long = &HC000CA
+Const MERGEPAINT As Long = &HBB0226
+Const NOTSRCCOPY As Long = &H330008
+Const NOTSRCERASE As Long = &H1100A6
+Const PATCOPY As Long = &HF00021&
+Const PATINVERT As Long = &H5A0049
+Const PATPAINT As Long = &HFB0A09&
+Const SRCAND As Long = &H8800C6
+Const SRCCOPY As Long = &HCC0020
+Const SRCERASE As Long = &H440328
+Const SRCINVERT As Long = &H660046
+Const SRCPAINT As Long = &HEE0086
+Const WHITENESS As Long = &HFF0062&
+
+
+ 
+
+2) PlgBlt
+
+Private Type POINTAPI
+        x As Long
+        y As Long
+End Type
+
+ 
+
+3) PatBlt
+
+Const PATCOPY As Long = &HF00021&
+Const PATINVERT As Long = &H5A0049
+Const DSTINVERT As Long = &H550009
+Const BLACKNESS As Long = &H42
+Const WHITENESS As Long = &HFF0062& 
+----------------------------------------------------------------------------------------------------------
+
+BitBlt
+
+기능 : DC복사
+
+용도 : 화면캡쳐, 그래픽 고속 복사
+
+Declare Function BitBlt Lib "gdi32.dll" (ByVal hDestDC As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal dwRop As Long) As Long
+
+ 
+
+인수설명
+ hDestDC - 출력할 DC
+
+ x - 출력할 DC의 X 값 또는 Left 값
+
+ y - 출력할 DC의 Y 값 또는 Top 값
+
+ nWidth - 출력할 DC의 Width 값
+
+ nHeight - 출력할 DC의 Height 값
+
+ hSrcDC - 가져올 DC
+
+ xSrc - 가져올 DC의 X 값 또는 Left 값
+
+ ySrc - 가져올 DC의 Y 값 또는 Top 값
+
+ dwRop - 상수 (SRCCOPY, SRCAND, SRCPAINT, SRCINVERT, SRCERASE, ...)
+
+ 
+
+예문
+
+ Const SRCCOPY As Long = &HCC0020
+
+ Call BitBlt(Picture1.hDC, 0, 0, 100, 100, Picture2.hDC, 0, 0, SRCCOPY)
+
+ - Picture2의 0,0 좌표부터 100*100 크기만큼의 DC를 Picture1에 복사함
+
+----------------------------------------------------------------------------------------------------------
+
+StretchBlt
+
+기능 : 임의의 사이즈로 DC복사
+
+용도 : 확대/축소, 사이즈 재조정
+
+Declare Function StretchBlt Lib "gdi32.dll" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal nSrcWidth As Long, ByVal nSrcHeight As Long, ByVal dwRop As Long) As Long
+
+ 
+
+인수설명
+ hdc - 출력할 DC
+
+ x - 출력할 DC의 X 값 또는 Left 값
+
+ y - 출력할 DC의 Y 값 또는 Top 값
+
+ nWidth - 출력할 DC의 Width 값
+
+ nHeight - 출력할 DC의 Height 값
+
+ hSrcDC - 가져올 DC
+
+ xSrc - 가져올 DC의 X 값 또는 Left 값
+
+ ySrc - 가져올 DC의 Y 값 또는 Top 값
+
+ nSrcWidth - 가져올 DC의 Width 값
+
+ nSrcHeight - 가져올 DC의 Height 값
+
+ dwRop - 상수 (SRCCOPY, SRCAND, SRCPAINT, SRCINVERT, SRCERASE, ...)
+
+ 
+
+예문
+
+ Const SRCCOPY As Long = &HCC0020
+
+ Call StretchBlt(Picture1.hDC, 0, 0, 100, 100, Picture2.hDC, 0, 0, Picture2.ScaleWidth, Picture2.ScaleHeight, SRCCOPY)
+
+ - Picture2의 0,0 좌표부터 Picture2의 내부크기만큼의 DC를 Picture1에 100*100 으로 크기로 축소/확대하여 복사함
+
+----------------------------------------------------------------------------------------------------------
+
+PlgBlt
+
+기능 : 임의의 평행사변형 형태로 DC복사
+
+용도 : 그림 기울이기, 사이즈 재조정
+
+Declare Function PlgBlt Lib "gdi32.dll" (ByVal hdcDest As Long, ByRef lpPoint As POINTAPI, ByVal hdcSrc As Long, ByVal nXSrc As Long, ByVal nYSrc As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hbmMask As Long, ByVal xMask As Long, ByVal yMask As Long) As Long
+
+
+ 
+
+인수설명
+
+ hdcDest - 출력할 DC
+
+ ipPoint - 출력시 기울임에 대한 정보
+
+ hdcSrc - 가져올 DC
+
+ nXsrc - 가져올 DC의 X 값 또는 Left 값
+
+ nYsrc - 가져올 DC의 Y 값 또는 Top 값
+
+ nWidth - 출력할 DC의 Width 값
+
+ nHeight - 출력할 DC의 Height 값
+
+ hbmMask - 마스크 이미지 DC
+
+ xMask - 마스크 이미지 DC의 X 값 또는 Left 값
+
+ yMask - 마스크 이미지 DC의 Y 값 또는 Top 값
+
+ 
+
+예문
+
+ Type POINTAPI
+         x As Long
+         y As Long
+ End Type
+
+ 
+
+ Dim Pt(0 To 2) As POINTAPI
+
+ 
+
+ '왼쪽 위 모서리의 위치
+
+ Pt(0).x = 30
+ Pt(0).y = 10
+
+ '오른쪽 위 모서리의 위치
+ Pt(1).x = 300
+ Pt(1).y = 0
+
+ '왼쪽 아래 모서리의 위치
+ Pt(2).x = 0
+ Pt(2).y = 300
+
+ 
+
+ Call PlgBlt(Picture1.hdc, Pt(0), Picture2.hDC, 0, 0, 100, 100, ByVal 0&, ByVal 0&, ByVal 0&)
+-Picture2의 0,0 좌표부터 100,100 좌표까지의 이미지를 Pt() 배열에 설정된 대로 수정하여 Picture1에 뿌려줍니다
+
+----------------------------------------------------------------------------------------------------------
+
+MaskBlt
+
+기능 : 마스크 이미지를 적용하여 DC복사
+
+용도 : 부분 투명
+
+Declare Function MaskBlt Lib "gdi32.dll" (ByVal hdcDest As Long, ByVal nXDest As Long, ByVal nYDest As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hdcSrc As Long, ByVal nXSrc As Long, ByVal nYSrc As Long, ByVal hbmMask As Long, ByVal xMask As Long, ByVal yMask As Long, ByVal dwRop As Long) As Long
+
+
+ 
+
+인수설명
+
+ hdcDest - 출력할 DC
+
+ nXDest - 출력할 DC의 X 값 또는 Left 값
+
+ nYDest - 출력할 DC의 Y 값 또는 Top 값
+
+ nWidth - 출력할 DC의 Width 값
+
+ nHeight - 출력할 DC의 Height 값
+
+ hdcSrc - 가져올 DC
+
+ nXSrc - 가져올 DC의 X 값 또는 Left 값
+
+ nYSrc - 가져올 DC의 Y 값 또는 Top 값
+
+ hbmMask - 마스크 이미지 DC
+
+ xMask - 마스크 이미지 DC의 X 값 또는 Left 값
+
+ yMask - 마스크 이미지 DC의 Y 값 또는 Top 값
+
+ dwRop - 상수 (SRCCOPY, SRCAND, SRCPAINT, SRCINVERT, SRCERASE, ...)
+
+ 
+
+예문
+
+----------------------------------------------------------------------------------------------------------
+
+PatBlt (이 녀석에 대한 정보는 어느 사이트에서도 보유하고 있지 않았습니다.)
+
+기능 : 팔레트와 관련된 놈인듯함..
+
+용도 : 알수없음
+
+Declare Function PatBlt Lib "gdi32.dll" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal dwRop As Long) As Long
+
+----------------------------------------------------------------------------------------------------------
+
+TransparentBlt
+
+기능 : 특정색 투명화
+
+용도 : 특정색 투명 출력
+
+Declare Function TransparentBlt Lib "msimg32.dll" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal nSrcWidth As Long, ByVal nSrcHeight As Long, ByVal crTransparent As Long) As Long
+

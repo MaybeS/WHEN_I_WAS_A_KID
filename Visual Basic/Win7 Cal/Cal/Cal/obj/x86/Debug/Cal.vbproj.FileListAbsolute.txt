@@ -1,0 +1,14 @@
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\bin\Debug\Cal.exe
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\bin\Debug\Cal.pdb
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\bin\Debug\Cal.xml
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\WindowsApplication1.fMain.resources
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\Cal.exe
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\Cal.xml
+D:\May\develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\Cal.pdb
+D:\Develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\Cal.exe
+D:\Develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\Cal.xml
+D:\Develope\Visual Studio\Maybe Studio's P.r.e.s.e.n.t\Win7 Cal\Cal\Cal\obj\x86\Debug\Cal.pdb

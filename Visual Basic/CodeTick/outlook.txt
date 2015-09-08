@@ -1,0 +1,34 @@
+Private Sub Command7_Click()
+If Me.Text0 = "" Then MsgBox "받는이를 입력해 주세요": Me.Text0.SetFocus: Exit Sub
+If Me.Text2 = "" Then MsgBox "제목을 입력해 주세요": Me.Text2.SetFocus:  Exit Sub
+If Me.Text4 = "" Then MsgBox "내용을 입력해 주세요": Me.Text4.SetFocus: Exit Sub
+
+Dim olApp As Object
+Dim objMail As Object
+
+On Error Resume Next 'Keep going if there is an error
+
+
+Set olApp = GetObject(, "Outlook.Application") 'See if Outlook is open
+
+
+If Err Then 'Outlook is not open
+Set olApp = CreateObject("Outlook.Application") 'Create a new instance of Outlook
+End If
+
+'Create e-mail item
+Set objMail = olApp.CreateItem(olMailItem)
+
+With objMail
+
+'Set body format to HTML
+.BodyFormat = olFormatHTML
+.To = Me.Text0
+.Subject = Me.Text2
+.HTMLBody = Me.Text4
+.Send
+
+End With
+
+MsgBox "Operation completed successfully"
+End Sub

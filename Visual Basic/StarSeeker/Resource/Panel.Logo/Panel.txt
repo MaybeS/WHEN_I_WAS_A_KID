@@ -1,0 +1,6 @@
+Logo(Studio).Font = Lithos Pro
+Logo(Studio).FontSize = 100
+Logo(Seeker).Font = Unknown
+Logo(Seeker).FontSize = 175
+ForAll(x4).Font = Custom(NF)
+ForAll(x4).FontSize = Custom(NF)
